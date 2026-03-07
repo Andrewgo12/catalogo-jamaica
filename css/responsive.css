@@ -51,9 +51,9 @@
 
     .modal-content {
         border-radius: var(--radius-lg);
-        height: auto;
-        max-height: 85vh;
-        max-width: 850px;
+        height: 70vh;
+        max-height: 550px;
+        max-width: 800px;
         flex-direction: row;
         /* Horizontal layout for product modal */
         transform: scale(0.95);
@@ -73,7 +73,7 @@
     }
 
     .zoom-img {
-        width: 60%;
+        width: 55%;
         /* Takes up large space on the left */
         height: 100%;
         display: flex;
@@ -102,9 +102,9 @@
     }
 
     .info-producto {
-        width: 40%;
+        width: 45%;
         overflow-y: auto;
-        padding: 3rem 2.5rem;
+        padding: 1.5rem;
         background: rgba(255, 255, 255, 0.95);
     }
 
