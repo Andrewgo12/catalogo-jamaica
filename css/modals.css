@@ -36,9 +36,11 @@ body.modal-open {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     width: 100%;
+    max-width: 90vw;
+    /* Aseguramos margen lateral y que no toque los bordes */
     height: auto;
     max-height: 85vh;
-    /* Flexible height so it fits content and screen without cutting buttons off */
+    /* Evita que toque los bordes superior/inferior */
     border-radius: 24px;
     position: relative;
     display: flex;
