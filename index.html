@@ -11,7 +11,8 @@
     <meta property="og:description" content="Productos de belleza natural y cuidado corporal de alta gama.">
     <!-- CSS Modulares -->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/modals.css">
 
@@ -45,14 +46,18 @@
     <!-- ZONA DE BÚSQUEDA Y CATEGORÍAS -->
     <div class="filtros-container">
         <div class="search-wrapper">
-            <input type="text" id="buscador" placeholder="Buscar producto o REF..." onkeyup="buscarProductos()">
+            <input type="text" id="buscador" placeholder="Buscar producto..." onkeyup="buscarProductos()">
+            <button type="button" class="search-btn" onclick="buscarProductos()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+            </button>
         </div>
 
         <div class="categorias-scroll">
-            <button class="cat-btn activo" onclick="filtrarCategoria('todos')">Todos</button>
-            <button class="cat-btn" onclick="filtrarCategoria('capilar')">Capilar</button>
-            <button class="cat-btn" onclick="filtrarCategoria('intimo')">Íntimo</button>
-            <button class="cat-btn" onclick="filtrarCategoria('favoritos')">
+            <button class="cat-btn activo" data-cat="todos" onclick="filtrarCategoria('todos')">Todos</button>
+            <button class="cat-btn" data-cat="favoritos" onclick="filtrarCategoria('favoritos')">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     style="position:relative; top:2px; margin-right:4px;">
                     <path
@@ -109,8 +114,14 @@
                 </svg>
             </div>
             <div class="modal-body-content">
-                <div class="zoom-img">
+                <div class="zoom-img" onclick="abrirFullscreenImagen()">
                     <img id="modal-img" src="" alt="Producto" loading="lazy">
+                    <div class="fullscreen-hint">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                        </svg>
+                        <span>Clic para ampliar</span>
+                    </div>
                 </div>
                 <div class="info-producto">
                     <span id="modal-ref" class="ref-text"></span>
@@ -170,6 +181,39 @@
         </div>
     </div>
 
+    <!-- MODAL FULLSCREEN IMAGEN -->
+    <div id="modal-fullscreen" class="modal-overlay fullscreen-overlay" style="display: none;">
+        <div class="fullscreen-content">
+            <div class="close-fullscreen-btn" onclick="cerrarFullscreen()">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </div>
+            <img id="fullscreen-img" src="" alt="Imagen completa" loading="lazy">
+            <div class="fullscreen-controls">
+                <button onclick="zoomIn()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35M11 8v6M8 11h6"/>
+                    </svg>
+                </button>
+                <button onclick="zoomOut()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35M8 11h6"/>
+                    </svg>
+                </button>
+                <button onclick="resetZoom()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                        <path d="M3 3v5h5"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- FOOTER E ICONO OCULTO PARA PANEL ADMIN -->
     <footer class="footer">
         <p>&copy; 2026 Jamaica Natural.</p>
@@ -201,9 +245,14 @@
                 <select id="p-categoria">
                     <option value="capilar">Capilar</option>
                     <option value="intimo">Íntimo</option>
-                    <option value="todos">Otros</option>
+                    <option value="facial">Facial</option>
+                    <option value="maquillaje">Maquillaje</option>
+                    <option value="bronceador">Bronceador</option>
+                    <option value="aceite">Aceites</option>
+                    <option value="otros">Otros</option>
+                    <option value="todos">Todos</option>
                 </select>
-                <label>Ruta Min. (png):</label><input type="text" id="p-img-min" value="img/prod_01.png">
+                <label>Ruta Min. (png):</label><input type="text" id="p-img-min" value="img/miniaturas/prod_01.png">
                 <label>Ruta Detalle (jpg):</label><input type="text" id="p-img-det" value="img/prod_01.jpeg">
                 <label>Beneficios (comas):</label><textarea id="p-beneficios"></textarea>
 

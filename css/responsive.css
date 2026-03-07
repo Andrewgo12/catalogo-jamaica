@@ -1,0 +1,579 @@
+/* Ultra Responsive CSS - Tipografía Elegante y Minimalista */
+
+/* ======== HEADER ELEGANTE ======== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(250, 248, 245, 0.8);
+    border-bottom: 1px solid rgba(212, 165, 116, 0.1);
+    padding: var(--space-6);
+    text-align: center;
+}
+
+.header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== CONTENEDORES FLEXIBLES ======== */
+.filtros-container {
+    max-width: 100%;
+    margin: var(--space-6) auto;
+    padding: 0 var(--space-4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: min(90vw, 600px);
+    display: flex;
+    align-items: center;
+}
+
+.search-wrapper input {
+    flex: 1;
+    padding: clamp(var(--space-3), 2vw, var(--space-4)) clamp(2rem, 6vw, 4rem) clamp(var(--space-3), 2vw, var(--space-4));
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow-sm);
+    font-family: var(--font-primary);
+    font-size: clamp(var(--text-sm), 2.5vw, var(--text-base));
+    font-weight: 400;
+    outline: none;
+    transition: all var(--transition-base);
+    text-align: center;
+    min-height: 48px;
+    color: var(--foreground);
+}
+
+.search-wrapper input::placeholder {
+    color: var(--muted-foreground);
+    font-weight: 400;
+}
+
+.search-wrapper input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+    background: rgba(255, 255, 255, 1);
+}
+
+.search-btn {
+    position: absolute;
+    right: var(--space-2);
+    background: var(--accent);
+    border: none;
+    width: clamp(2rem, 5vw, 2.5rem);
+    height: clamp(2rem, 5vw, 2.5rem);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    color: white;
+    min-width: 44px;
+    min-height: 44px;
+    box-shadow: var(--shadow-md);
+}
+
+.search-btn:hover {
+    background: var(--primary);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.search-btn:active {
+    transform: scale(0.98);
+}
+
+/* ======== CATEGORÍAS ELEGANTES ======== */
+.categorias-scroll {
+    display: flex;
+    gap: var(--space-3);
+    overflow-x: auto;
+    padding: var(--space-1);
+    max-width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.categorias-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.cat-btn {
+    padding: var(--space-3) var(--space-5);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--muted-foreground);
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: clamp(var(--text-sm), 2vw, var(--text-sm));
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    box-shadow: var(--shadow-sm);
+}
+
+.cat-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    color: var(--foreground);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.cat-btn.activo {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    box-shadow: var(--shadow-lg);
+    font-weight: 600;
+}
+
+/* ======== GRID ADAPTATIVO ======== */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: var(--space-6);
+    padding: var(--space-6);
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ======== TARJETAS ELEGANTES ======== */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 165, 116, 0.1);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-slow);
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(0);
+    width: 100%;
+    min-height: 200px;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(212, 165, 116, 0.2);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* ======== IMÁGENES ELEGANTES ======== */
+.card-img-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background: linear-gradient(135deg, #faf8f5 0%, #f5f2ed 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-6);
+    cursor: pointer;
+    min-height: 150px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform var(--transition-slow);
+    max-width: 90%;
+    max-height: 90%;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1));
+    cursor: zoom-in;
+}
+
+.card-img-container:hover img {
+    transform: scale(1.1);
+}
+
+.card-img-container:active img,
+.card-img-container.pressed img {
+    transform: scale(1.5);
+    cursor: zoom-out;
+    z-index: 10;
+    position: relative;
+}
+
+/* ======== BADGES ELEGANTES ======== */
+.ref-badge {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--accent);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius);
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-xs), 1.75vw, var(--text-sm));
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    box-shadow: var(--shadow-sm);
+    z-index: 10;
+    border: 1px solid rgba(212, 165, 116, 0.1);
+}
+
+.oferta-badge {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+    color: white;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-full);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(var(--text-xs), 1.75vw, var(--text-sm));
+    z-index: 10;
+    box-shadow: var(--magic-glow);
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(212, 165, 116, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(212, 165, 116, 0.5); }
+}
+
+/* ======== BOTÓN FAVORITOS ELEGANTE ======== */
+.btn-fav {
+    position: absolute;
+    top: var(--space-4);
+    left: var(--space-4);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 165, 116, 0.1);
+    width: clamp(1.75rem, 4.5vw, 2.5rem);
+    height: clamp(1.75rem, 4.5vw, 2.5rem);
+    border-radius: var(--radius-full);
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    z-index: 20;
+    transform: translateZ(0);
+    min-width: 36px;
+    min-height: 36px;
+    color: var(--muted-foreground);
+}
+
+.btn-fav:hover {
+    transform: scale(1.1);
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: var(--shadow-md);
+    color: var(--accent);
+}
+
+.btn-fav:active {
+    transform: scale(0.95);
+}
+
+.btn-fav.es-fav {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(212, 165, 116, 0.1);
+    animation: heart-pulse 1.5s ease-in-out;
+}
+
+@keyframes heart-pulse {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(0.95); }
+    75% { transform: scale(1.1); }
+}
+
+/* ======== INFO DE TARJETA ELEGANTE ======== */
+.card-info {
+    padding: var(--space-6);
+    padding-top: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: clamp(150px, 25vh, 200px);
+}
+
+.card-info h3 {
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-lg), 2.5vw, var(--text-xl));
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: var(--space-3);
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+}
+
+.card-info .desc-cortada {
+    font-family: var(--font-primary);
+    font-size: clamp(var(--text-sm), 2vw, var(--text-base));
+    color: var(--muted-foreground);
+    margin-bottom: var(--space-4);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.card-info .precio {
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-xl), 3.5vw, var(--text-2xl));
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: auto;
+    margin-bottom: var(--space-5);
+    position: relative;
+}
+
+.card-info .precio::before {
+    content: '$';
+    font-size: clamp(var(--text-base), 2.5vw, var(--text-lg));
+    margin-right: var(--space-1);
+}
+
+/* ======== BOTONES ELEGANTES ======== */
+.botones-card {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: auto;
+}
+
+.btn {
+    flex: 1;
+    padding: var(--space-3) 0;
+    border-radius: var(--radius-lg);
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: clamp(var(--text-sm), 1.75vw, var(--text-sm));
+    cursor: pointer;
+    transition: all var(--transition-base);
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2);
+    position: relative;
+    overflow: hidden;
+    min-height: 44px;
+    letter-spacing: 0.025em;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left var(--transition-slow);
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-ver {
+    background: rgba(212, 165, 116, 0.1);
+    color: var(--accent);
+    border-color: rgba(212, 165, 116, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-ver:hover {
+    background: rgba(212, 165, 116, 0.2);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-add,
+.btn-secundario {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+    color: white;
+    border: none;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-add:hover,
+.btn-secundario:hover {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ======== CARRITO FLOTANTE ELEGANTE ======== */
+.cart-float {
+    position: fixed;
+    bottom: var(--space-6);
+    right: var(--space-6);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 165, 116, 0.1);
+    color: var(--accent);
+    width: clamp(3rem, 7vw, 4rem);
+    height: clamp(3rem, 7vw, 4rem);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    z-index: 999;
+    transition: all var(--transition-base);
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.cart-float:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: var(--shadow-xl);
+    background: rgba(255, 255, 255, 1);
+}
+
+.cart-float span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--accent);
+    color: white;
+    min-width: clamp(1.25rem, 3vw, 1.5rem);
+    height: clamp(1.25rem, 3vw, 1.5rem);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-xs), 1.5vw, var(--text-sm));
+    font-weight: 600;
+    transform: translate(25%, -25%);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ======== FOOTER ELEGANTE ======== */
+.footer {
+    text-align: center;
+    padding: var(--space-12);
+    font-family: var(--font-primary);
+    font-size: var(--text-sm);
+    color: var(--muted-foreground);
+    margin-top: var(--space-16);
+    border-top: 1px solid rgba(212, 165, 116, 0.1);
+    font-weight: 400;
+}
+
+/* ======== BREAKPOINTS ESPECÍFICOS ======== */
+
+/* Extra pequeño - menos de 320px */
+@media (max-width: 320px) {
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+        padding: var(--space-4);
+    }
+    
+    .card {
+        border-radius: var(--radius-lg);
+        min-height: 180px;
+    }
+    
+    .card-info {
+        padding: var(--space-4);
+        padding-top: var(--space-5);
+        min-height: 140px;
+    }
+    
+    .btn-fav {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Pequeño - 321px a 480px */
+@media (min-width: 321px) and (max-width: 480px) {
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mediano - 481px a 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .catalogo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Grande - 769px a 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .catalogo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-5);
+        padding: var(--space-5);
+    }
+}
+
+/* Extra grande - más de 1024px */
+@media (min-width: 1025px) {
+    .catalogo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: var(--space-6);
+        padding: var(--space-6);
+        max-width: 1400px;
+    }
+}
+
+/* Ultra grande - más de 1440px */
+@media (min-width: 1440px) {
+    .catalogo-grid {
+        max-width: 1600px;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: var(--space-8);
+    }
+}
