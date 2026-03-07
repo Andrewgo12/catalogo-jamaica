@@ -25,7 +25,7 @@ export function descargarCatalogoPDF() {
             <div style="display: flex; margin-bottom: 40px; border-bottom: 2px solid #f3f4f6; padding-bottom: 30px; page-break-inside: avoid; background: ${esPar ? '#fafafa' : '#ffffff'}; border-radius: 20px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
                 <div style="flex: 0 0 400px; margin-right: 30px;">
                     <div style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
-                        <img src="${p.imagen_detalle}" style="width: 400px; height: 400px; object-fit: cover; display: block;" crossorigin="anonymous">
+                        <img src="${p.imagen_miniatura}" style="width: 400px; height: 400px; object-fit: cover; display: block;" crossorigin="anonymous">
                         <div style="position: absolute; top: 15px; right: 15px; background: #f43f5e; color: white; padding: 8px 16px; border-radius: 25px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(244, 63, 94, 0.3);">
                             REF: ${p.id}
                         </div>
@@ -71,8 +71,11 @@ export function descargarCatalogoPDF() {
     });
 
     container.innerHTML = html;
-    container.style.position = 'absolute';
+    container.style.position = 'fixed';
+    container.style.top = '0';
     container.style.left = '-9999px';
+    container.style.width = '1200px';
+    container.style.zIndex = '-9999';
     document.body.appendChild(container);
 
     const opt = {
@@ -80,7 +83,7 @@ export function descargarCatalogoPDF() {
         filename: 'Catalogo-Jamaica.pdf',
         image: { type: 'jpeg', quality: 1.0 },
         html2canvas: {
-            scale: 2, /* Reduced from 3 to prevent mobile crash */
+            scale: 2,
             useCORS: true,
             logging: false,
             allowTaint: true,
@@ -97,12 +100,28 @@ export function descargarCatalogoPDF() {
         }
     };
 
-    html2pdf().set(opt).from(container).save().then(() => {
-        document.body.removeChild(container);
-        mostrarToast("PDF descargado con éxito", "success");
-    }).catch(err => {
-        document.body.removeChild(container);
-        mostrarToast("Error al generar PDF", "error");
-        console.error(err);
+    // Esperamos a que las imágenes carguen antes de renderizar
+    const imagenes = container.querySelectorAll('img');
+    let promesas = [];
+    imagenes.forEach(img => {
+        if (!img.complete) {
+            promesas.push(new Promise((resolve) => {
+                img.onload = img.onerror = resolve;
+            }));
+        }
+    });
+
+    Promise.all(promesas).then(() => {
+        // Redujimos el margen de error del renderizado forzando un repaint breve
+        setTimeout(() => {
+            html2pdf().set(opt).from(container).save().then(() => {
+                document.body.removeChild(container);
+                mostrarToast("PDF descargado con éxito", "success");
+            }).catch(err => {
+                document.body.removeChild(container);
+                mostrarToast("Error al generar PDF", "error");
+                console.error(err);
+            });
+        }, 100);
     });
 }
