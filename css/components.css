@@ -221,8 +221,8 @@ button {
 /* Catálogo Grid */
 .catalogo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    /* Fluidly adapt */
+    grid-template-columns: repeat(3, 1fr);
+    /* Exactly 3 columns on mobile */
     gap: 0.75rem;
     padding: 1rem;
     max-width: 1200px;

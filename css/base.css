@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
 :root {
-    --primary: #f43f5e;
-    --primary-hover: #e11d48;
-    --secondary: #0f172a;
-    --secondary-hover: #1e293b;
-    --bg-color: #f8fafc;
+    --primary: #d9777f;
+    /* Soft rose gold / dusty pink */
+    --primary-hover: #c4626a;
+    --secondary: #4a3b39;
+    /* Deep warm brown instead of slate */
+    --secondary-hover: #362927;
+    --bg-color: #fdfaf6;
+    /* Very light warm nude */
     --surface: #ffffff;
-    --text-main: #334155;
-    --text-muted: #64748b;
-    --border-color: #e2e8f0;
-    --success: #10b981;
+    --text-main: #5c4f4d;
+    /* Warm dark grey/brown */
+    --text-muted: #8c7e7c;
+    --border-color: #f0e6df;
+    /* Soft nude border */
+    --success: #82a896;
+    /* Muted sage green */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
@@ -35,9 +41,9 @@ body {
     font-family: var(--font-sans);
     background-color: var(--bg-color);
     background-image:
-        radial-gradient(at 0% 0%, rgba(244, 63, 94, 0.05) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.05) 0px, transparent 50%);
+        radial-gradient(at 0% 0%, rgba(217, 119, 127, 0.08) 0px, transparent 60%),
+        radial-gradient(at 100% 0%, rgba(245, 230, 216, 0.4) 0px, transparent 60%),
+        radial-gradient(at 100% 100%, rgba(212, 185, 172, 0.15) 0px, transparent 50%);
     background-attachment: fixed;
     font-size: 0.9375rem;
     /* ~15px instead of 16px */
@@ -61,36 +67,51 @@ h6 {
 }
 
 .header {
-    background: rgba(255, 255, 255, 0.75);
-    /* More transparent for better glass */
+    background: rgba(253, 250, 246, 0.85);
+    /* Warm transparent glass */
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     position: sticky;
     top: 0;
-    padding: 1rem;
+    padding: 1.2rem 1rem;
     text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid rgba(74, 59, 57, 0.05);
+    /* Very subtle warm border */
+    box-shadow: 0 4px 20px rgba(74, 59, 57, 0.03);
+    z-index: 100;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.brand-logo svg {
+    color: var(--primary);
 }
 
 .header h1 {
     font-family: var(--font-serif);
     font-style: italic;
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
     /* Responsive fluid typography */
-    color: var(--primary);
+    color: var(--secondary);
     margin: 0;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .filtros-container {
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.6);
+    /* More transparent to show nude background */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     /* Removed position: sticky to prevent overlap */
     position: relative;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(74, 59, 57, 0.05);
     box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
