@@ -1,20 +1,20 @@
 /* js/state.js: Estado Global y Gestión de Datos */
 
 // ======== CONFIGURACIÓN GLOBAL ========
-export const TelefonoEmpresa = "573001234567"; // Modifica aquí tu número real
+export const TelefonoEmpresa = "573107167474"; // Modifica aquí tu número real
 export const ClaveAdmin = "jamaica123";
 
 // ======== ESTADO GLOBAL ========
 export const State = {
     // Base de datos de productos
     dbProductos: [],
-    
+
     // Carrito de compras
     carrito: [],
-    
+
     // Favoritos
     favoritos: [],
-    
+
     // Estado de la UI
     categoriaActual: 'todos',
     productoSeleccionadoTemporal: null,
@@ -129,10 +129,10 @@ export function obtenerResumenCarrito() {
 // Obtener productos filtrados
 export function obtenerProductosFiltrados() {
     let productos = State.dbProductos;
-    
+
     // Filtrar por disponibilidad
     productos = productos.filter(p => p.disponible !== false);
-    
+
     // Filtrar por categoría
     if (State.categoriaActual !== 'todos') {
         if (State.categoriaActual === 'favoritos') {
@@ -141,18 +141,18 @@ export function obtenerProductosFiltrados() {
             productos = productos.filter(p => p.categoria === State.categoriaActual);
         }
     }
-    
+
     // Filtrar por búsqueda
     if (State.terminoBusqueda) {
         const termino = State.terminoBusqueda.toLowerCase();
-        productos = productos.filter(p => 
+        productos = productos.filter(p =>
             p.titulo.toLowerCase().includes(termino) ||
             p.descripcion.toLowerCase().includes(termino) ||
             p.categoria.toLowerCase().includes(termino) ||
             p.id.toString().includes(termino)
         );
     }
-    
+
     return productos;
 }
 
