@@ -14,7 +14,7 @@
             "Con aguacate, papaya, romero y colágeno",
             "Sin siliconas ni parabenos"
         ],
-        "imagen_miniatura": "img/prod_01.png",
+        "imagen_miniatura": "img/miniaturas/prod_01.png",
         "imagen_detalle": "img/prod_01.jpeg"
     },
     {
@@ -31,7 +31,7 @@
             "Fórmula artesanal",
             "Ecofriendly"
         ],
-        "imagen_miniatura": "img/prod_02.png",
+        "imagen_miniatura": "img/miniaturas/prod_02.png",
         "imagen_detalle": "img/prod_02.jpeg"
     },
     {
@@ -47,7 +47,7 @@
             "Con más de 10 mantecas y aceites naturales",
             "Contenido Neto 200g"
         ],
-        "imagen_miniatura": "img/prod_03.png",
+        "imagen_miniatura": "img/miniaturas/prod_03.png",
         "imagen_detalle": "img/prod_03.jpeg"
     },
     {
@@ -64,7 +64,7 @@
             "Protege e hidrata tu piel",
             "Gel bronceador corporal"
         ],
-        "imagen_miniatura": "img/prod_04.png",
+        "imagen_miniatura": "img/miniaturas/prod_04.png",
         "imagen_detalle": "img/prod_04.jpeg"
     },
     {
@@ -81,7 +81,7 @@
             "Agradable aroma",
             "Ingredientes naturales y veganos"
         ],
-        "imagen_miniatura": "img/prod_05.png",
+        "imagen_miniatura": "img/miniaturas/prod_05.png",
         "imagen_detalle": "img/prod_05.jpeg"
     },
     {
@@ -97,7 +97,7 @@
             "Hidrata y suaviza",
             "Sin parabenos ni siliconas"
         ],
-        "imagen_miniatura": "img/prod_06.png",
+        "imagen_miniatura": "img/miniaturas/prod_06.png",
         "imagen_detalle": "img/prod_06.jpeg"
     },
     {
@@ -114,7 +114,7 @@
             "Cabello suave y manejable",
             "Sin siliconas ni parabenos"
         ],
-        "imagen_miniatura": "img/prod_07.png",
+        "imagen_miniatura": "img/miniaturas/prod_07.png",
         "imagen_detalle": "img/prod_07.jpeg"
     },
     {
@@ -131,7 +131,7 @@
             "Vegano y sin parabenos",
             "Formulación artesanal"
         ],
-        "imagen_miniatura": "img/prod_08.png",
+        "imagen_miniatura": "img/miniaturas/prod_08.png",
         "imagen_detalle": "img/prod_08.jpeg"
     },
     {
@@ -148,7 +148,7 @@
             "Libre de parabenos y siliconas",
             "Contiene cebolla, romero, ortiga"
         ],
-        "imagen_miniatura": "img/prod_09.png",
+        "imagen_miniatura": "img/miniaturas/prod_09.png",
         "imagen_detalle": "img/prod_09.jpeg"
     },
     {
@@ -165,7 +165,7 @@
             "Mantén tu cabello suave y brillante",
             "Duerme mejor sin nudos ni enredos"
         ],
-        "imagen_miniatura": "img/prod_10.png",
+        "imagen_miniatura": "img/miniaturas/prod_10.png",
         "imagen_detalle": "img/prod_10.jpeg"
     },
     {
@@ -182,7 +182,7 @@
             "Suaviza y nutre",
             "Extracto natural de uva"
         ],
-        "imagen_miniatura": "img/prod_11.png",
+        "imagen_miniatura": "img/miniaturas/prod_11.png",
         "imagen_detalle": "img/prod_11.jpeg"
     },
     {
@@ -199,7 +199,7 @@
             "100% natural",
             "Receta Natural"
         ],
-        "imagen_miniatura": "img/prod_12.png",
+        "imagen_miniatura": "img/miniaturas/prod_12.png",
         "imagen_detalle": "img/prod_12.jpeg"
     },
     {
@@ -216,7 +216,7 @@
             "Piel nutrida",
             "Incluye: Gotero facial, parches para ojos y labios, y toallitas"
         ],
-        "imagen_miniatura": "img/prod_13.png",
+        "imagen_miniatura": "img/miniaturas/prod_13.png",
         "imagen_detalle": "img/prod_13.jpeg"
     },
     {
@@ -233,7 +233,7 @@
             "Sensación de frescura prolongada",
             "Aromas delicados y sutiles"
         ],
-        "imagen_miniatura": "img/prod_14.png",
+        "imagen_miniatura": "img/miniaturas/prod_14.png",
         "imagen_detalle": "img/prod_14.jpeg"
     },
     {
@@ -250,7 +250,7 @@
             "Sensación de frescura prolongada",
             "Aroma sutil y masculino"
         ],
-        "imagen_miniatura": "img/prod_15.png",
+        "imagen_miniatura": "img/miniaturas/prod_15.png",
         "imagen_detalle": "img/prod_15.jpeg"
     },
     {
@@ -267,7 +267,7 @@
             "Perfecta para looks casuales o elegantes",
             "Aporta brillo en segundos"
         ],
-        "imagen_miniatura": "img/prod_16.png",
+        "imagen_miniatura": "img/miniaturas/prod_16.png",
         "imagen_detalle": "img/prod_16.jpeg"
     },
     {
@@ -283,7 +283,7 @@
             "Óleo: Nutre profundamente y sella puntas",
             "Tónico: Estimula el crecimiento capilar"
         ],
-        "imagen_miniatura": "img/prod_17.png",
+        "imagen_miniatura": "img/miniaturas/prod_17.png",
         "imagen_detalle": "img/prod_17.jpeg"
     },
     {
@@ -299,7 +299,7 @@
             "Detox: Purifica el cuero cabelludo",
             "Cebolla y Romero: Fortalece y estimula crecimiento"
         ],
-        "imagen_miniatura": "img/prod_18.png",
+        "imagen_miniatura": "img/miniaturas/prod_18.png",
         "imagen_detalle": "img/prod_18.jpeg"
     },
     {
@@ -316,7 +316,7 @@
             "Ideal para todo tipo de cabello",
             "Envíos a todo Colombia"
         ],
-        "imagen_miniatura": "img/prod_19.png",
+        "imagen_miniatura": "img/miniaturas/prod_19.png",
         "imagen_detalle": "img/prod_19.jpeg"
     },
     {
@@ -333,7 +333,7 @@
             "Diseño ergonómico de silicona",
             "Envíos a todo Colombia"
         ],
-        "imagen_miniatura": "img/prod_20.png",
+        "imagen_miniatura": "img/miniaturas/prod_20.png",
         "imagen_detalle": "img/prod_20.jpeg"
     },
     {
@@ -350,7 +350,7 @@
             "Ilumina y revitaliza",
             "Efecto refrescante inmediato"
         ],
-        "imagen_miniatura": "img/prod_21.png",
+        "imagen_miniatura": "img/miniaturas/prod_21.png",
         "imagen_detalle": "img/prod_21.jpeg"
     },
     {
@@ -367,7 +367,7 @@
             "Suaviza líneas finas",
             "Deja tus labios más tersos y saludables"
         ],
-        "imagen_miniatura": "img/prod_22.png",
+        "imagen_miniatura": "img/miniaturas/prod_22.png",
         "imagen_detalle": "img/prod_22.jpeg"
     },
     {
@@ -384,7 +384,7 @@
             "Define y da brillo sin sensación grasosa",
             "Con almendra, aguacate y coco"
         ],
-        "imagen_miniatura": "img/prod_23.png",
+        "imagen_miniatura": "img/miniaturas/prod_23.png",
         "imagen_detalle": "img/prod_23.jpeg"
     },
     {
@@ -401,7 +401,7 @@
             "Dejan tu piel limpia y suave",
             "Ideales para llevar contigo"
         ],
-        "imagen_miniatura": "img/prod_24.png",
+        "imagen_miniatura": "img/miniaturas/prod_24.png",
         "imagen_detalle": "img/prod_24.jpeg"
     },
     {
@@ -418,7 +418,7 @@
             "Protege tu cabello del exceso de calor",
             "Material suave de microfibra"
         ],
-        "imagen_miniatura": "img/prod_25.png",
+        "imagen_miniatura": "img/miniaturas/prod_25.png",
         "imagen_detalle": "img/prod_25.jpeg"
     },
     {
@@ -435,7 +435,7 @@
             "Cruelty-free",
             "Libre de tóxicos"
         ],
-        "imagen_miniatura": "img/prod_26.png",
+        "imagen_miniatura": "img/miniaturas/prod_26.png",
         "imagen_detalle": "img/prod_26.jpeg"
     },
     {
@@ -452,7 +452,7 @@
             "Aporta brillo y textura ligera no grasosa",
             "Aroma suave de uso diario"
         ],
-        "imagen_miniatura": "img/prod_27.png",
+        "imagen_miniatura": "img/miniaturas/prod_27.png",
         "imagen_detalle": "img/prod_27.jpeg"
     },
     {
@@ -469,7 +469,7 @@
             "Sin parabenos, libre de tóxicos",
             "Formulación artesanal"
         ],
-        "imagen_miniatura": "img/prod_28.png",
+        "imagen_miniatura": "img/miniaturas/prod_28.png",
         "imagen_detalle": "img/prod_28.jpeg"
     },
     {
@@ -486,7 +486,7 @@
             "Aporta brillo, suavidad y reduce el frizz",
             "Con aguacate, papaya, romero y colágeno"
         ],
-        "imagen_miniatura": "img/prod_29.png",
+        "imagen_miniatura": "img/miniaturas/prod_29.png",
         "imagen_detalle": "img/prod_29.jpeg"
     },
     {
@@ -503,7 +503,7 @@
             "Tonalidad roja sutil",
             "Labial natural en formato bálsamo"
         ],
-        "imagen_miniatura": "img/prod_30.png",
+        "imagen_miniatura": "img/miniaturas/prod_30.png",
         "imagen_detalle": "img/prod_30.jpeg"
     },
     {
@@ -520,7 +520,7 @@
             "Elaboración artesanal",
             "200g de contenido"
         ],
-        "imagen_miniatura": "img/prod_31.png",
+        "imagen_miniatura": "img/miniaturas/prod_31.png",
         "imagen_detalle": "img/prod_31.jpeg"
     },
     {
@@ -537,7 +537,7 @@
             "Suaviza e hidrata la fibra capilar",
             "Aporta vitalidad y fuerza al cabello"
         ],
-        "imagen_miniatura": "img/prod_32.png",
+        "imagen_miniatura": "img/miniaturas/prod_32.png",
         "imagen_detalle": "img/prod_32.jpeg"
     }
 ]
