@@ -1,7 +1,7 @@
 // js/app.js: Entry Point de la Aplicación
 import { State } from './state.js';
 import { configurarHistoryAPI, inicializarCloseOnClickOutside } from './ui.js';
-import { cargarBaseDatos, buscarProductos, filtrarCategoria, cerrarModal, cambiarCantModal } from './products.js';
+import { cargarBaseDatos, buscarProductos, filtrarCategoria, handleFiltrarCategoria, cerrarModal, cambiarCantModal } from './products.js';
 import { abrirResumenCarrito, vaciarCarrito, generarPedidoWpp, cerrarCarrito } from './cart.js';
 import { descargarCatalogoPDF } from './pdf.js';
 import { inicializarAdminListeners, cerrarAdmin, checkAccesoAdmin, generarJSONProducto } from './admin.js';
@@ -30,7 +30,7 @@ function recuperarEstadoLocal() {
 // Exponer funciones necesarias al scope global (window) porque HTML usa onclick=""
 function exponerGlobalesAPI() {
     window.buscarProductos = buscarProductos;
-    window.filtrarCategoria = filtrarCategoria;
+    window.filtrarCategoria = handleFiltrarCategoria;
     window.cerrarModal = cerrarModal;
     window.cambiarCantModal = cambiarCantModal;
 
@@ -44,4 +44,131 @@ function exponerGlobalesAPI() {
     window.cerrarAdmin = cerrarAdmin;
     window.checkAccesoAdmin = checkAccesoAdmin;
     window.generarJSONProducto = generarJSONProducto;
+
+    // Funciones de Fullscreen
+    window.abrirFullscreenImagen = abrirFullscreenImagen;
+    window.cerrarFullscreen = cerrarFullscreen;
+    window.zoomIn = zoomIn;
+    window.zoomOut = zoomOut;
+    window.resetZoom = resetZoom;
 }
+
+// Variables globales para zoom
+let currentZoom = 1;
+const zoomStep = 0.2;
+const maxZoom = 3;
+const minZoom = 0.5;
+
+// Función para abrir modal fullscreen
+function abrirFullscreenImagen(imageSrc = null, imageAlt = '') {
+    const fullscreenImg = document.getElementById('fullscreen-img');
+    const fullscreenModal = document.getElementById('modal-fullscreen');
+    
+    if (fullscreenImg && fullscreenModal) {
+        // Si no se proporciona imagen, usar la del modal actual
+        if (!imageSrc) {
+            const modalImg = document.getElementById('modal-img');
+            if (modalImg) {
+                fullscreenImg.src = modalImg.src;
+                fullscreenImg.alt = modalImg.alt;
+            }
+        } else {
+            fullscreenImg.src = imageSrc;
+            fullscreenImg.alt = imageAlt;
+        }
+        
+        fullscreenModal.style.display = 'flex';
+        
+        // Reset zoom
+        currentZoom = 1;
+        actualizarZoom();
+        
+        // Prevenir scroll del body
+        document.body.style.overflow = 'hidden';
+        
+        // Animación de entrada
+        setTimeout(() => {
+            fullscreenModal.classList.add('show');
+        }, 10);
+    }
+}
+
+// Función para cerrar modal fullscreen
+function cerrarFullscreen() {
+    const fullscreenModal = document.getElementById('modal-fullscreen');
+    
+    if (fullscreenModal) {
+        fullscreenModal.classList.remove('show');
+        
+        setTimeout(() => {
+            fullscreenModal.style.display = 'none';
+            document.body.style.overflow = '';
+        }, 300);
+    }
+}
+
+// Función de zoom in
+function zoomIn() {
+    if (currentZoom < maxZoom) {
+        currentZoom += zoomStep;
+        actualizarZoom();
+    }
+}
+
+// Función de zoom out
+function zoomOut() {
+    if (currentZoom > minZoom) {
+        currentZoom -= zoomStep;
+        actualizarZoom();
+    }
+}
+
+// Función para reset zoom
+function resetZoom() {
+    currentZoom = 1;
+    actualizarZoom();
+}
+
+// Función para actualizar el zoom de la imagen
+function actualizarZoom() {
+    const fullscreenImg = document.getElementById('fullscreen-img');
+    if (fullscreenImg) {
+        fullscreenImg.style.transform = `scale(${currentZoom})`;
+    }
+}
+
+// Event listeners para teclado
+document.addEventListener('keydown', (e) => {
+    const fullscreenModal = document.getElementById('modal-fullscreen');
+    
+    if (fullscreenModal && fullscreenModal.style.display === 'flex') {
+        switch(e.key) {
+            case 'Escape':
+                cerrarFullscreen();
+                break;
+            case '+':
+            case '=':
+                zoomIn();
+                break;
+            case '-':
+            case '_':
+                zoomOut();
+                break;
+            case '0':
+                resetZoom();
+                break;
+        }
+    }
+});
+
+// Event listener para cerrar con clic fuera de la imagen
+document.addEventListener('click', (e) => {
+    const fullscreenModal = document.getElementById('modal-fullscreen');
+    const fullscreenImg = document.getElementById('fullscreen-img');
+    
+    if (fullscreenModal && fullscreenModal.style.display === 'flex') {
+        if (e.target === fullscreenModal) {
+            cerrarFullscreen();
+        }
+    }
+});
