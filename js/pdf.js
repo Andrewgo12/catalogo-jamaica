@@ -71,13 +71,16 @@ export function descargarCatalogoPDF() {
     });
 
     container.innerHTML = html;
+    container.style.position = 'absolute';
+    container.style.left = '-9999px';
+    document.body.appendChild(container);
 
     const opt = {
         margin: 15,
         filename: 'Catalogo-Jamaica.pdf',
         image: { type: 'jpeg', quality: 1.0 },
-        html2canvas: { 
-            scale: 3, 
+        html2canvas: {
+            scale: 2, /* Reduced from 3 to prevent mobile crash */
             useCORS: true,
             logging: false,
             allowTaint: true,
@@ -85,9 +88,9 @@ export function descargarCatalogoPDF() {
             imageTimeout: 15000,
             removeContainer: true
         },
-        jsPDF: { 
-            unit: 'mm', 
-            format: 'a4', 
+        jsPDF: {
+            unit: 'mm',
+            format: 'a4',
             orientation: 'landscape',
             compress: false,
             precision: 16
@@ -95,8 +98,10 @@ export function descargarCatalogoPDF() {
     };
 
     html2pdf().set(opt).from(container).save().then(() => {
-        mostrarToast("PDF descargado con éxito");
+        document.body.removeChild(container);
+        mostrarToast("PDF descargado con éxito", "success");
     }).catch(err => {
+        document.body.removeChild(container);
         mostrarToast("Error al generar PDF", "error");
         console.error(err);
     });

@@ -104,7 +104,8 @@ h6 {
 }
 
 .filtros-container {
-    padding: 1rem;
+    padding: 1rem 0.5rem;
+    /* Less horizontal padding so categories fit */
     background: rgba(255, 255, 255, 0.6);
     /* More transparent to show nude background */
     backdrop-filter: blur(12px);

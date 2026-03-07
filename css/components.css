@@ -147,11 +147,12 @@ button {
     background-color: var(--surface);
     color: var(--text-main);
     border: 1px solid var(--border-color);
-    padding: 0.4rem 1rem;
-    /* Slightly wider */
+    padding: 0.35rem 0.75rem;
+    /* Fits better horizontally */
     border-radius: var(--radius-full);
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    /* Smaller font for better fit */
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
