@@ -7,7 +7,6 @@ export function inicializarAdminListeners() {
     if (trigger) {
         trigger.onclick = () => {
             const modal = document.getElementById('admin-panel');
-            modal.style.display = 'flex';
             setTimeout(() => modal.classList.add('show'), 10);
         };
     }
@@ -16,13 +15,12 @@ export function inicializarAdminListeners() {
 export function cerrarAdmin() {
     const modal = document.getElementById('admin-panel');
     modal.classList.remove('show');
-    setTimeout(() => { modal.style.display = 'none'; }, 300);
 }
 
 export function checkAccesoAdmin() {
     if (document.getElementById('admin-pass').value === ClaveAdmin) {
-        document.getElementById('login-admin').style.display = 'none';
-        document.getElementById('form-registro').style.display = 'block';
+        document.getElementById('login-admin').classList.add('d-none');
+        document.getElementById('form-registro').classList.remove('d-none');
     } else {
         alert("Acceso denegado.");
     }

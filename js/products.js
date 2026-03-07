@@ -164,13 +164,9 @@ export function abrirSombraDetalle(id) {
     const btnAdd = document.getElementById('btn-add-modal');
     if (prod.disponible === false) {
         btnAdd.innerText = "Agotado Temporalmente";
-        btnAdd.style.background = "var(--border)";
-        btnAdd.style.color = "var(--muted-foreground)";
         btnAdd.disabled = true;
     } else {
         btnAdd.innerText = "Agregar a mi pedido";
-        btnAdd.style.background = "";
-        btnAdd.style.color = "";
         btnAdd.disabled = false;
         btnAdd.onclick = () => {
             agregarLogica(id, parseInt(document.getElementById('cant-prod').value));
@@ -179,17 +175,15 @@ export function abrirSombraDetalle(id) {
     }
 
     const modal = document.getElementById('modal-detalle');
-    modal.style.display = 'flex';
     setTimeout(() => modal.classList.add('show'), 10);
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('modal-open');
     history.pushState({ modalOpen: true }, '', `#producto-${id}`);
 }
 
 export function cerrarModal(goBack = true) {
     const modal = document.getElementById('modal-detalle');
     modal.classList.remove('show');
-    setTimeout(() => { modal.style.display = 'none'; }, 300);
-    document.body.style.overflow = 'auto';
+    document.body.classList.remove('modal-open');
     if (goBack) history.back();
 }
 
@@ -197,4 +191,8 @@ export function cambiarCantModal(delta) {
     const input = document.getElementById('cant-prod');
     let val = parseInt(input.value) + delta;
     input.value = val < 1 ? 1 : val;
+}
+
+export function handleFiltrarCategoria(cat) {
+    filtrarCategoria(cat);
 }

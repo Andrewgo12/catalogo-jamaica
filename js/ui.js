@@ -6,11 +6,12 @@ import { cerrarCarrito } from './cart.js';
 export function mostrarToast(msg, tipo = "success") {
     const toast = document.getElementById('toast-notificacion');
     document.getElementById('toast-msg').innerText = msg;
+    toast.className = ''; // Limpiar clases previas (success/error)
     if (tipo === "error") {
-        toast.style.color = "#ef4444";
+        toast.classList.add('toast-error');
         toast.querySelector('svg').innerHTML = `<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>`;
     } else {
-        toast.style.color = "var(--primary)";
+        toast.classList.add('toast-success');
         toast.querySelector('svg').innerHTML = `<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>`;
     }
     toast.classList.add('show');
@@ -32,7 +33,6 @@ export function inicializarCloseOnClickOutside() {
             else if (e.target.id === 'modal-carrito') cerrarCarrito();
             else {
                 e.target.classList.remove('show');
-                setTimeout(() => { e.target.style.display = 'none'; }, 300);
             }
         }
     });

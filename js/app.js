@@ -63,7 +63,7 @@ const minZoom = 0.5;
 function abrirFullscreenImagen(imageSrc = null, imageAlt = '') {
     const fullscreenImg = document.getElementById('fullscreen-img');
     const fullscreenModal = document.getElementById('modal-fullscreen');
-    
+
     if (fullscreenImg && fullscreenModal) {
         // Si no se proporciona imagen, usar la del modal actual
         if (!imageSrc) {
@@ -76,16 +76,14 @@ function abrirFullscreenImagen(imageSrc = null, imageAlt = '') {
             fullscreenImg.src = imageSrc;
             fullscreenImg.alt = imageAlt;
         }
-        
-        fullscreenModal.style.display = 'flex';
-        
+
         // Reset zoom
         currentZoom = 1;
         actualizarZoom();
-        
+
         // Prevenir scroll del body
-        document.body.style.overflow = 'hidden';
-        
+        document.body.classList.add('modal-open');
+
         // Animación de entrada
         setTimeout(() => {
             fullscreenModal.classList.add('show');
@@ -96,14 +94,10 @@ function abrirFullscreenImagen(imageSrc = null, imageAlt = '') {
 // Función para cerrar modal fullscreen
 function cerrarFullscreen() {
     const fullscreenModal = document.getElementById('modal-fullscreen');
-    
+
     if (fullscreenModal) {
         fullscreenModal.classList.remove('show');
-        
-        setTimeout(() => {
-            fullscreenModal.style.display = 'none';
-            document.body.style.overflow = '';
-        }, 300);
+        document.body.classList.remove('modal-open');
     }
 }
 
@@ -140,9 +134,9 @@ function actualizarZoom() {
 // Event listeners para teclado
 document.addEventListener('keydown', (e) => {
     const fullscreenModal = document.getElementById('modal-fullscreen');
-    
-    if (fullscreenModal && fullscreenModal.style.display === 'flex') {
-        switch(e.key) {
+
+    if (fullscreenModal && fullscreenModal.classList.contains('show')) {
+        switch (e.key) {
             case 'Escape':
                 cerrarFullscreen();
                 break;
@@ -165,8 +159,8 @@ document.addEventListener('keydown', (e) => {
 document.addEventListener('click', (e) => {
     const fullscreenModal = document.getElementById('modal-fullscreen');
     const fullscreenImg = document.getElementById('fullscreen-img');
-    
-    if (fullscreenModal && fullscreenModal.style.display === 'flex') {
+
+    if (fullscreenModal && fullscreenModal.classList.contains('show')) {
         if (e.target === fullscreenModal) {
             cerrarFullscreen();
         }

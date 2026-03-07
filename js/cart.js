@@ -19,16 +19,16 @@ export function agregarLogica(id, cantNum) {
     mostrarToast("Añadido al pedido");
 
     const cajaCart = document.getElementById('cart-float');
-    cajaCart.style.transform = 'translateY(-10px) scale(1.1)';
-    setTimeout(() => cajaCart.style.transform = '', 300);
+    cajaCart.classList.add('bounce');
+    setTimeout(() => cajaCart.classList.remove('bounce'), 300);
 }
 
 export function actualizarInterfazCarritoResumen() {
     const cont = State.carrito.reduce((sum, item) => sum + item.cantidad, 0);
     document.getElementById('cart-count').innerText = cont;
     const cartFloat = document.getElementById('cart-float');
-    if (cont > 0) cartFloat.style.boxShadow = "var(--shadow-lg), 0 0 0 2px var(--primary)";
-    else cartFloat.style.boxShadow = "var(--shadow-lg), 0 0 0 1px rgba(0,0,0,0.05)";
+    if (cont > 0) cartFloat.classList.add('has-items');
+    else cartFloat.classList.remove('has-items');
 }
 
 export function abrirResumenCarrito() {
@@ -67,16 +67,14 @@ export function abrirResumenCarrito() {
     history.pushState({ modalOpen: true }, '', `#checkout`);
 
     const modal = document.getElementById('modal-carrito');
-    modal.style.display = 'flex';
     setTimeout(() => modal.classList.add('show'), 10);
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('modal-open');
 }
 
 export function cerrarCarrito(goBack = true) {
     const modal = document.getElementById('modal-carrito');
     modal.classList.remove('show');
-    setTimeout(() => { modal.style.display = 'none'; }, 300);
-    document.body.style.overflow = 'auto';
+    document.body.classList.remove('modal-open');
     if (goBack) history.back();
 }
 
