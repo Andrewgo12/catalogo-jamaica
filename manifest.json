@@ -1,0 +1,21 @@
+{
+    "name": "Catálogo Jamaica - Natural Beauty",
+    "short_name": "Jamaica",
+    "description": "Productos de belleza natural y cuidado corporal de alta gama.",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fafaf9",
+    "theme_color": "#f43f5e",
+    "icons": [
+        {
+            "src": "https://via.placeholder.com/192x192.png?text=Jamaica",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://via.placeholder.com/512x512.png?text=Jamaica",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,0 +1,543 @@
+﻿[
+    {
+        "disponible": true,
+        "id": "01",
+        "titulo": "Tratamiento Capilar Intensivo",
+        "descripcion": "Recupera el brillo y la fuerza de tu cabello con esta receta natural, elaborada para una nutrición intensiva.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Fortalece e hidrata en profundidad",
+            "Con más de 20 aceites naturales",
+            "Repara y suaviza el cabello seco y dañado",
+            "Con aguacate, papaya, romero y colágeno",
+            "Sin siliconas ni parabenos"
+        ],
+        "imagen_miniatura": "img/prod_01.png",
+        "imagen_detalle": "img/prod_01.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "02",
+        "titulo": "Aceite Multipropósito",
+        "descripcion": "Descubre la versatilidad de la belleza natural con un aceite ideal para cuerpo, cabello y rostro.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Ideal para cuerpo, cabello y rostro",
+            "Vegano y sin tóxicos",
+            "Fórmula artesanal",
+            "Ecofriendly"
+        ],
+        "imagen_miniatura": "img/prod_02.png",
+        "imagen_detalle": "img/prod_02.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "03",
+        "titulo": "Mantequilla Corporal",
+        "descripcion": "Lujosa y nutritiva Mantequilla corporal con más de 10 mantecas y aceites naturales.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Lujosa y nutritiva",
+            "Con más de 10 mantecas y aceites naturales",
+            "Contenido Neto 200g"
+        ],
+        "imagen_miniatura": "img/prod_03.png",
+        "imagen_detalle": "img/prod_03.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "04",
+        "titulo": "Jamaica Bronce Gold (Bronceador)",
+        "descripcion": "Protección solar y bronceado dorado. Cuida e ilumina tu piel con FPS 50.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Bronceado dorado e iluminador",
+            "Protección solar FPS 50",
+            "Protege e hidrata tu piel",
+            "Gel bronceador corporal"
+        ],
+        "imagen_miniatura": "img/prod_04.png",
+        "imagen_detalle": "img/prod_04.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "05",
+        "titulo": "Aceite Bifásico Íntimo",
+        "descripcion": "Frescura Íntima & Cuidado Total, dejando tu piel suave y sedosa con un agradable aroma.",
+        "oferta": true,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Receta Natural",
+            "Suaviza e hidrata",
+            "Agradable aroma",
+            "Ingredientes naturales y veganos"
+        ],
+        "imagen_miniatura": "img/prod_05.png",
+        "imagen_detalle": "img/prod_05.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "06",
+        "titulo": "Acondicionador de Cebolla y Romero",
+        "descripcion": "Fortalece y Repara para un cabello saludable y renovado.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Reduce la caída",
+            "Hidrata y suaviza",
+            "Sin parabenos ni siliconas"
+        ],
+        "imagen_miniatura": "img/prod_06.png",
+        "imagen_detalle": "img/prod_06.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "07",
+        "titulo": "Termo-Protector",
+        "descripcion": "Protección y suavidad para tu cabello con receta natural.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Defiende contra el daño por calor hasta 230ºC",
+            "Previene el frizz y puntas abiertas",
+            "Cabello suave y manejable",
+            "Sin siliconas ni parabenos"
+        ],
+        "imagen_miniatura": "img/prod_07.png",
+        "imagen_detalle": "img/prod_07.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "08",
+        "titulo": "Shampoo Detox",
+        "descripcion": "Purifica tu cabello naturalmente con ingredientes orgánicos y ecológicos.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Elimina impurezas",
+            "Detoxifica el cuero cabelludo",
+            "Vegano y sin parabenos",
+            "Formulación artesanal"
+        ],
+        "imagen_miniatura": "img/prod_08.png",
+        "imagen_detalle": "img/prod_08.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "09",
+        "titulo": "Tónico Capilar",
+        "descripcion": "Receta Natural con más de 20 extractos para devolver la vida a tu cabello.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Estimula el crecimiento capilar",
+            "Refuerza y fortalece desde la raíz",
+            "Libre de parabenos y siliconas",
+            "Contiene cebolla, romero, ortiga"
+        ],
+        "imagen_miniatura": "img/prod_09.png",
+        "imagen_detalle": "img/prod_09.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "10",
+        "titulo": "Gorro de Satín",
+        "descripcion": "Duerme como una reina: protección y belleza para tu cabello mientras descansas.",
+        "oferta": true,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Reduce el frizz y la rotura",
+            "Retiene la humedad del cabello",
+            "Mantén tu cabello suave y brillante",
+            "Duerme mejor sin nudos ni enredos"
+        ],
+        "imagen_miniatura": "img/prod_10.png",
+        "imagen_detalle": "img/prod_10.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "11",
+        "titulo": "Lipstick Uva",
+        "descripcion": "Labios hidratados y fortalecidos, suavizando y nutriendo con extracto natural de uvas.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Hidratante y fortalecedor",
+            "Labial Natural",
+            "Suaviza y nutre",
+            "Extracto natural de uva"
+        ],
+        "imagen_miniatura": "img/prod_11.png",
+        "imagen_detalle": "img/prod_11.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "12",
+        "titulo": "Shampoo de Cebolla y Romero",
+        "descripcion": "Cuida y fortalece tu cabello para un crecimiento saludable y rápido.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Estimula el crecimiento",
+            "Reduce la caída",
+            "100% natural",
+            "Receta Natural"
+        ],
+        "imagen_miniatura": "img/prod_12.png",
+        "imagen_detalle": "img/prod_12.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "13",
+        "titulo": "Kit de Hidratación Facial",
+        "descripcion": "Cuida tu piel todos los días con este completo kit de belleza: Hidratación, reparación y suavidad natural.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Labios hidratados",
+            "Contorno de ojos renovado",
+            "Piel nutrida",
+            "Incluye: Gotero facial, parches para ojos y labios, y toallitas"
+        ],
+        "imagen_miniatura": "img/prod_13.png",
+        "imagen_detalle": "img/prod_13.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "14",
+        "titulo": "Aceites Bifásicos Íntimos (Para Él y Para Ella)",
+        "descripcion": "Cuidado íntimo total, hidratación e ingredientes que aportan frescura prologada durante todo el día.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Ideal para el cuidado íntimo femenino y masculino",
+            "Hidratación profunda",
+            "Sensación de frescura prolongada",
+            "Aromas delicados y sutiles"
+        ],
+        "imagen_miniatura": "img/prod_14.png",
+        "imagen_detalle": "img/prod_14.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "15",
+        "titulo": "Aceite Bifásico Íntimo para Hombres",
+        "descripcion": "Confianza y frescura en tus manos. Aporta cuidado y frescura a tu zona íntima con total protección.",
+        "oferta": true,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Fórmula natural",
+            "Hidratación profunda",
+            "Sensación de frescura prolongada",
+            "Aroma sutil y masculino"
+        ],
+        "imagen_miniatura": "img/prod_15.png",
+        "imagen_detalle": "img/prod_15.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "16",
+        "titulo": "Coleta con detalle de flor dorada",
+        "descripcion": "Elegancia que florece en tu cabello. Accesorio de diseño moderno que aporta brillo y estilo.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Coleta elástica con detalle floral",
+            "Diseño moderno y sofisticado",
+            "Perfecta para looks casuales o elegantes",
+            "Aporta brillo en segundos"
+        ],
+        "imagen_miniatura": "img/prod_16.png",
+        "imagen_detalle": "img/prod_16.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "17",
+        "titulo": "Línea de Tratamiento Capilar",
+        "descripcion": "Tratamiento completo de Nutrición, Hidratación y Fortalecimiento: incluye Sérum, Óleo y Tónico.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Sérum: Restaura con Ácido Hialurónico",
+            "Óleo: Nutre profundamente y sella puntas",
+            "Tónico: Estimula el crecimiento capilar"
+        ],
+        "imagen_miniatura": "img/prod_17.png",
+        "imagen_detalle": "img/prod_17.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "18",
+        "titulo": "Línea de Shampoo Natural",
+        "descripcion": "Tratamiento capilar integral: Shampoo Ultranutritivo, Shampoo Detox y Shampoo de Cebolla y Romero.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Ultranutritivo: Aporta nutrición y brillo",
+            "Detox: Purifica el cuero cabelludo",
+            "Cebolla y Romero: Fortalece y estimula crecimiento"
+        ],
+        "imagen_miniatura": "img/prod_18.png",
+        "imagen_detalle": "img/prod_18.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "19",
+        "titulo": "Masajeador Relajante (Pulpo)",
+        "descripcion": "¡Libera el estrés y disfruta un masaje relajante! Alivia tensiones y promueve una mejor circulación.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Reduce el estrés y la tensión",
+            "Estimula la circulación sanguínea",
+            "Ideal para todo tipo de cabello",
+            "Envíos a todo Colombia"
+        ],
+        "imagen_miniatura": "img/prod_19.png",
+        "imagen_detalle": "img/prod_19.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "20",
+        "titulo": "Cepillo Masajeador Capilar",
+        "descripcion": "¡Transforma tu rutina capilar! Masajea, estimula y relaja tu cuero cabelludo mientras lavas tu cabello.",
+        "oferta": true,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Estimula la circulación",
+            "Favorece el crecimiento del cabello",
+            "Diseño ergonómico de silicona",
+            "Envíos a todo Colombia"
+        ],
+        "imagen_miniatura": "img/prod_20.png",
+        "imagen_detalle": "img/prod_20.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "21",
+        "titulo": "Parches para Ojos BIOAQUA Golden Caviar",
+        "descripcion": "Hidratación profunda para tu mirada. Gel hidratante en parches para ojeras con efecto descansado y juvenil.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Reduce bolsas",
+            "Disminuye líneas de expresión",
+            "Ilumina y revitaliza",
+            "Efecto refrescante inmediato"
+        ],
+        "imagen_miniatura": "img/prod_21.png",
+        "imagen_detalle": "img/prod_21.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "22",
+        "titulo": "Mascarilla Hidratante para Labios BIOAQUA",
+        "descripcion": "Consiente tus labios y luce una sonrisa irresistible con la mascarilla de labios de colágeno.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Hidrata profundamente",
+            "Nutre y repara",
+            "Suaviza líneas finas",
+            "Deja tus labios más tersos y saludables"
+        ],
+        "imagen_miniatura": "img/prod_22.png",
+        "imagen_detalle": "img/prod_22.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "23",
+        "titulo": "Crema para Peinar Natural",
+        "descripcion": "Nutrición y protección para tu cabello. Define y protege, dejando tu cabello suave y sin frizz.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Leave in 3 en 2: peina, nutre y protege",
+            "Hidrata y controla el frizz",
+            "Define y da brillo sin sensación grasosa",
+            "Con almendra, aguacate y coco"
+        ],
+        "imagen_miniatura": "img/prod_23.png",
+        "imagen_detalle": "img/prod_23.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "24",
+        "titulo": "Seditas para Eliminar Grasa del Rostro",
+        "descripcion": "¡Despídete del brillo facial con las seditas matificantes de lino! Absorben el exceso de grasa en segundos.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Absorben el exceso de grasa instantáneamente",
+            "Mantienen tu piel matte y fresca",
+            "Dejan tu piel limpia y suave",
+            "Ideales para llevar contigo"
+        ],
+        "imagen_miniatura": "img/prod_24.png",
+        "imagen_detalle": "img/prod_24.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "25",
+        "titulo": "Toalla Secadora para Cabello",
+        "descripcion": "¡Seca tu cabello rápido y sin esfuerzo! Cuida tu cabello secándolo confortablemente de manera natural.",
+        "oferta": true,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Absorbe rápidamente la humedad",
+            "Fácil de colocar y asegura con botón",
+            "Protege tu cabello del exceso de calor",
+            "Material suave de microfibra"
+        ],
+        "imagen_miniatura": "img/prod_25.png",
+        "imagen_detalle": "img/prod_25.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "26",
+        "titulo": "Tratamiento de Chocoterapia",
+        "descripcion": "Transforma tu cabello con la magia del chocolate. Belleza capilar con este dulce ritual.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Receta Natural",
+            "Eco amigable e ingredientes veganos",
+            "Cruelty-free",
+            "Libre de tóxicos"
+        ],
+        "imagen_miniatura": "img/prod_26.png",
+        "imagen_detalle": "img/prod_26.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "27",
+        "titulo": "Splash Capilar y Corporal",
+        "descripcion": "Frescura natural que se siente y se nota. Perfecto para después del baño, la playa o la rutina diaria.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Refresca, hidrata y nutre",
+            "Fórmula con aloe vera, colágeno y queratina",
+            "Aporta brillo y textura ligera no grasosa",
+            "Aroma suave de uso diario"
+        ],
+        "imagen_miniatura": "img/prod_27.png",
+        "imagen_detalle": "img/prod_27.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "28",
+        "titulo": "Mascarilla Capilar Sólida Candy Pop",
+        "descripcion": "¡Beauty Lollipops para el cabello! Convierte el cuidado capilar en un auténtico dulce ritual.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Extracto de fresa y frambuesa",
+            "Vegano y orgánico",
+            "Sin parabenos, libre de tóxicos",
+            "Formulación artesanal"
+        ],
+        "imagen_miniatura": "img/prod_28.png",
+        "imagen_detalle": "img/prod_28.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "29",
+        "titulo": "Tratamiento Capilar Intensivo",
+        "descripcion": "Nutrición intensiva para un cabello sano y fuerte, dejándolo sedoso, brillante y sin frizz.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Recupera e hidrata a profundidad",
+            "Con más de 20 aceites naturales",
+            "Aporta brillo, suavidad y reduce el frizz",
+            "Con aguacate, papaya, romero y colágeno"
+        ],
+        "imagen_miniatura": "img/prod_29.png",
+        "imagen_detalle": "img/prod_29.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "30",
+        "titulo": "Lipstick Frutos Rojos",
+        "descripcion": "Labios suaves y nutridos todos los días con este hidratante natural.",
+        "oferta": true,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Enriquecido con extracto natural de frutos rojos",
+            "Hidratante y fortalecedor",
+            "Tonalidad roja sutil",
+            "Labial natural en formato bálsamo"
+        ],
+        "imagen_miniatura": "img/prod_30.png",
+        "imagen_detalle": "img/prod_30.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "31",
+        "titulo": "Mantequilla Corporal",
+        "descripcion": "Hidrata y nutre tu piel intensamente con la Mantequilla Corporal de Receta Natural.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Con más de 10 mantecas y aceites naturales",
+            "Hidratación profunda",
+            "Elaboración artesanal",
+            "200g de contenido"
+        ],
+        "imagen_miniatura": "img/prod_31.png",
+        "imagen_detalle": "img/prod_31.jpeg"
+    },
+    {
+        "disponible": true,
+        "id": "32",
+        "titulo": "Shampoo Ultranutritivo",
+        "descripcion": "Nutre tu cabello profundamente con extractos frutales y florales.",
+        "oferta": false,
+        "categoria": "todos",
+        "precio": 30000,
+        "beneficios": [
+            "Con extractos de frutas",
+            "Más de 15 extractos de plantas naturales",
+            "Suaviza e hidrata la fibra capilar",
+            "Aporta vitalidad y fuerza al cabello"
+        ],
+        "imagen_miniatura": "img/prod_32.png",
+        "imagen_detalle": "img/prod_32.jpeg"
+    }
+]

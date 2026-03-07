@@ -1,0 +1,364 @@
+/* css/modals.css: Modal Overlays and internal UI */
+
+/* Glass UI Modals */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.show .modal-content {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--muted-foreground);
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--muted);
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.close-btn:hover {
+    color: var(--foreground);
+    background: var(--border);
+}
+
+/* Modal body modern layout */
+.modal-body-content {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.zoom-img {
+    flex: 1;
+    background: var(--muted);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.zoom-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.info-producto {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-producto h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+    letter-spacing: -0.03em;
+}
+
+.ref-text {
+    display: inline-block;
+    background: var(--muted);
+    color: var(--muted-foreground);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: max-content;
+}
+
+.desc-text {
+    color: var(--muted-foreground);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.precio-destacado {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: var(--foreground);
+    margin-bottom: 2rem;
+}
+
+.beneficios-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+ul#modal-beneficios {
+    list-style: none;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+ul#modal-beneficios li {
+    padding-left: 1.75rem;
+    position: relative;
+    color: var(--foreground);
+    font-size: 0.9rem;
+}
+
+ul#modal-beneficios li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1.1rem;
+    top: -2px;
+}
+
+.selector-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    background: var(--muted);
+    padding: 0.35rem;
+    border-radius: var(--radius-md);
+    width: max-content;
+    border: 1px solid var(--border);
+}
+
+.selector-cantidad button {
+    background: white;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selector-cantidad button:hover {
+    background: #f1f5f9;
+}
+
+.selector-cantidad input {
+    width: 2.5rem;
+    text-align: center;
+    background: transparent;
+    border: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--primary);
+    outline: none;
+}
+
+/* Wpp Checkout UI inside Modal */
+.modal-carrito-content {
+    max-width: 600px;
+}
+
+.modal-carrito-content h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+}
+
+.item-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.item-info h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.item-info p {
+    font-size: 0.85rem;
+    color: var(--muted-foreground);
+    font-weight: 500;
+}
+
+.item-acciones {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.item-acciones strong {
+    font-size: 1.1rem;
+    color: var(--foreground);
+    font-weight: 800;
+}
+
+.btn-eliminar-item {
+    background: var(--muted);
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.btn-eliminar-item:hover {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.resumen-total {
+    margin-top: 2rem;
+}
+
+.resumen-total h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--muted-foreground);
+}
+
+.resumen-total h3 span {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--foreground);
+    letter-spacing: -0.05em;
+}
+
+.btn-wpp {
+    background: linear-gradient(to right, #10b981, #059669);
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-wpp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-limpiar {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted-foreground);
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-limpiar:hover {
+    background: #fee2e2;
+    color: #ef4444;
+    border-color: #fca5a5;
+}
+
+@media (max-width: 768px) {
+    .modal-body-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .zoom-img img {
+        max-height: 250px;
+    }
+
+    .info-producto h2 {
+        font-size: 1.5rem;
+    }
+
+    .precio-destacado {
+        font-size: 2rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+    }
+}
