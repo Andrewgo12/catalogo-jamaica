@@ -4,8 +4,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    /* Fix para pantallas móviles con barras dinámicas */
+    height: 100dvh;
     background: rgba(15, 23, 42, 0.4);
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
@@ -39,9 +41,10 @@ body.modal-open {
     max-width: 90vw;
     /* Aseguramos margen lateral y que no toque los bordes */
     height: auto;
-    max-height: 85vh;
-    /* Evita que toque los bordes superior/inferior */
-    border-radius: 24px;
+    max-height: 75vh;
+    /* Mucho más pequeño, evita corte por barra inferior en móviles */
+    max-height: 75dvh;
+    border-radius: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -100,8 +103,8 @@ body.modal-open {
 
 .zoom-img img {
     width: 100%;
-    height: 35vh;
-    /* Reduced from 40vh so content fits better */
+    height: 220px;
+    /* Altura mucho más reducida para móviles */
     object-fit: cover;
     mix-blend-mode: multiply;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -128,14 +131,17 @@ body.modal-open {
 }
 
 .info-producto {
-    padding: 1rem;
+    padding: 0.75rem 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.3rem;
+    /* Aún más apretado */
+    overflow-y: visible;
+    /* Prevent internal scroll inside info to let flex body handle it */
 }
 
 .ref-text {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -144,8 +150,8 @@ body.modal-open {
 
 .info-producto h2 {
     font-family: var(--font-serif);
-    font-size: 1.25rem;
-    /* Reduced to save space */
+    font-size: 1.1rem;
+    /* Tamaño más pequeño para el título en móvil */
     font-weight: 700;
     margin: 0;
     color: var(--secondary);
@@ -154,14 +160,14 @@ body.modal-open {
 
 .desc-text {
     color: var(--text-muted);
-    font-size: 0.85rem;
-    line-height: 1.4;
+    font-size: 0.8rem;
+    line-height: 1.3;
     margin-bottom: 0.25rem;
 }
 
 .precio-destacado {
-    font-size: 1.35rem;
-    /* Reduced */
+    font-size: 1.15rem;
+    /* Reducido para móvil */
     font-weight: 800;
     background: linear-gradient(135deg, var(--primary), #fb7185);
     background-clip: text;
@@ -171,12 +177,12 @@ body.modal-open {
 }
 
 .beneficios-title {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
     color: var(--secondary);
     font-weight: 700;
     border-bottom: 2px solid rgba(244, 63, 94, 0.1);
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.15rem;
     display: inline-block;
 }
 
@@ -193,8 +199,8 @@ body.modal-open {
 #modal-beneficios li {
     display: flex;
     align-items: flex-start;
-    gap: 0.6rem;
-    font-size: 0.9rem;
+    gap: 0.4rem;
+    font-size: 0.75rem;
     color: var(--text-main);
 }
 
@@ -221,13 +227,13 @@ body.modal-open {
 .selector-cantidad button {
     background: transparent;
     color: var(--secondary);
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: background 0.2s;
 }
 
@@ -236,10 +242,10 @@ body.modal-open {
 }
 
 .selector-cantidad input {
-    width: 44px;
+    width: 32px;
     text-align: center;
     border: none;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 700;
     background: transparent;
     font-family: var(--font-sans);
