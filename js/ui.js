@@ -2,6 +2,7 @@
 import { State } from './state.js';
 import { cerrarModal } from './products.js';
 import { cerrarCarrito } from './cart.js';
+import { cerrarModalPDF } from './pdf.js';
 
 export function mostrarToast(msg, tipo = "success") {
     const toast = document.getElementById('toast-notificacion');
@@ -31,6 +32,7 @@ export function inicializarCloseOnClickOutside() {
         if (e.target.classList.contains('modal-overlay')) {
             if (e.target.id === 'modal-detalle') cerrarModal();
             else if (e.target.id === 'modal-carrito') cerrarCarrito();
+            else if (e.target.id === 'modal-pdf') cerrarModalPDF();
             else {
                 e.target.classList.remove('show');
             }

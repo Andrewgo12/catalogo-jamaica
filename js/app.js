@@ -3,7 +3,7 @@ import { State } from './state.js';
 import { configurarHistoryAPI, inicializarCloseOnClickOutside } from './ui.js';
 import { cargarBaseDatos, buscarProductos, filtrarCategoria, handleFiltrarCategoria, cerrarModal, cambiarCantModal } from './products.js';
 import { abrirResumenCarrito, vaciarCarrito, generarPedidoWpp, cerrarCarrito } from './cart.js';
-import { descargarCatalogoPDF } from './pdf.js';
+import { abrirModalPDF, cerrarModalPDF } from './pdf.js';
 import { inicializarAdminListeners, cerrarAdmin, checkAccesoAdmin, generarJSONProducto } from './admin.js';
 
 // Inicialización
@@ -14,7 +14,21 @@ window.onload = () => {
     inicializarCloseOnClickOutside();
     inicializarAdminListeners();
     exponerGlobalesAPI();
+    inicializarScrollHeader();
 };
+
+function inicializarScrollHeader() {
+    const header = document.querySelector('.header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 30) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
+}
 
 function recuperarEstadoLocal() {
     const carritoGuardado = localStorage.getItem('jamaica_carrito_v2');
@@ -39,7 +53,8 @@ function exponerGlobalesAPI() {
     window.vaciarCarrito = vaciarCarrito;
     window.generarPedidoWpp = generarPedidoWpp;
 
-    window.descargarCatalogoPDF = descargarCatalogoPDF;
+    window.abrirModalPDF = abrirModalPDF;
+    window.cerrarModalPDF = cerrarModalPDF;
 
     window.cerrarAdmin = cerrarAdmin;
     window.checkAccesoAdmin = checkAccesoAdmin;

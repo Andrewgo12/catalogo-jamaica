@@ -8,14 +8,14 @@
     "theme_color": "#f43f5e",
     "icons": [
         {
-            "src": "https://via.placeholder.com/192x192.png?text=Jamaica",
+            "src": "img/logooriginal.jpeg",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/jpeg"
         },
         {
-            "src": "https://via.placeholder.com/512x512.png?text=Jamaica",
+            "src": "img/logooriginal.jpeg",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/jpeg"
         }
     ]
 }
