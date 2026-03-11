@@ -8,7 +8,9 @@ import { inicializarAdminListeners, cerrarAdmin, checkAccesoAdmin, generarJSONPr
 
 // Inicialización
 window.onload = () => {
+    console.log("Aplicación iniciada...");
     recuperarEstadoLocal();
+    console.log("Cargando BD...");
     cargarBaseDatos();
     configurarHistoryAPI();
     inicializarCloseOnClickOutside();
