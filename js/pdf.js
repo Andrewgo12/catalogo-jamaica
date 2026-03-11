@@ -1,7 +1,3 @@
-// js/pdf.js: Exportador de Catálogo a PDF
-import { State, formatearMoneda } from './state.js';
-import { mostrarToast } from './ui.js';
-
 // js/pdf.js: Controlador Sólido del modal de descargas de Catálogo
 
 export function abrirModalPDF() {
@@ -30,6 +26,7 @@ export function cerrarModalPDF() {
     
     // Removemos la clase de animación
     modal.classList.remove('show');
+    modal.style.display = ''; // Limpiamos el flex forzado
     
     // Devolvemos el scroll al body inmediatamente
     document.body.classList.remove('modal-open');

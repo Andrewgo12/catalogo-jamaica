@@ -1,23 +1,23 @@
 // sw.js: Service Worker para Caché Offline de la app (PWA)
 
-const CACHE_NAME = 'jamaica-cache-v8';
+const CACHE_NAME = 'jamaica-cache-v9';
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/css/base.css',
-    '/css/animations.css',
-    '/css/components.css',
-    '/css/modals.css',
-    '/css/responsive.css',
-    '/js/app.js',
-    '/js/admin.js',
-    '/js/cart.js',
-    '/js/pdf.js',
-    '/js/products.js',
-    '/js/state.js',
-    '/js/ui.js',
-    '/productos.json',
-    '/manifest.json'
+    './',
+    './index.html',
+    './css/base.css',
+    './css/animations.css',
+    './css/components.css',
+    './css/modals.css',
+    './css/responsive.css',
+    './js/app.js',
+    './js/admin.js',
+    './js/cart.js',
+    './js/pdf.js',
+    './js/products.js',
+    './js/state.js',
+    './js/ui.js',
+    './productos.json',
+    './manifest.json'
 ];
 
 // Instalamos el Service Worker y abrimos el Caché
