@@ -154,13 +154,26 @@ export function generarPedidoWpp() {
 💰 *TOTAL A PAGAR: ${formatearMoneda(total)}*
 ━━━━━━━━━━━━━━━━━━━━━━
 
-🚚 *DATOS PARA ENVÍO*
+� *MÉTODOS DE PAGO*
 ━━━━━━━━━━━━━━━━━━━━━━
+📱 *Nequi:* 3107167474
+🏦 *Bancolombia:* Cuenta de Ahorro 85103093321
+
+👩‍💼 *VENDEDORA*
+━━━━━━━━━━━━━━━━━━━━━━
+� *Yuli Aranda*
+📞 *3107167474*
+
+📋 *TUS DATOS PERSONALES*
+━━━━━━━━━━━━━━━━━━━━━━
+👤 Nombre completo:
+📞 Tu teléfono:
 📍 Dirección de entrega:
-📞 Teléfono de contacto:
 🏠 Ciudad y barrio:
-💳 Método de pago:
+💳 Método de pago elegido:
 📝 Notas adicionales:
+
+✅ *Por favor envía comprobante de pago junto con tus datos*
 
 ━━━━━━━━━━━━━━━━━━━━━━
 ⭐ *GRACIAS POR PREFERIRNOS* ⭐

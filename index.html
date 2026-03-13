@@ -207,6 +207,22 @@
             <div id="carrito-lista"></div>
             <div class="resumen-total">
                 <h3>Total parcial <span id="carrito-total-texto">$ 0</span></h3>
+                
+                <!-- Información de pago y contacto -->
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 12px; margin: 15px 0; border-left: 4px solid var(--primary);">
+                    <h4 style="margin: 0 0 10px 0; color: var(--secondary); font-size: 1rem;"> Datos de Contacto</h4>
+                    <p style="margin: 5px 0; font-size: 0.9rem; color: var(--text);"><strong>Vendedora:</strong> Yuli Aranda</p>
+                    <p style="margin: 5px 0; font-size: 0.9rem; color: var(--text);"><strong>Teléfono:</strong> 3107167474</p>
+                </div>
+                
+                <div style="background: #fff0f2; padding: 15px; border-radius: 12px; margin: 15px 0; border-left: 4px solid var(--primary);">
+                    <h4 style="margin: 0 0 10px 0; color: var(--secondary); font-size: 1rem;"> Métodos de Pago</h4>
+                    <p style="margin: 8px 0; font-size: 0.85rem; color: var(--text);"><strong>Nequi:</strong> 3107167474</p>
+                    <p style="margin: 8px 0; font-size: 0.85rem; color: var(--text);"><strong>Bancolombia:</strong></p>
+                    <p style="margin: 5px 0 0 15px; font-size: 0.85rem; color: var(--text);">Cuenta de Ahorro: 85103093321</p>
+                    <p style="margin: 10px 0 0 0; font-size: 0.8rem; color: var(--text-muted); font-style: italic;"> Enviar comprobante de pago por favor</p>
+                </div>
+                
                 <button class="btn-wpp" onclick="generarPedidoWpp()">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path
@@ -302,13 +318,13 @@
     </footer>
 
     <!-- JS Modular -->
-    <script type="module" src="js/app.js?v=2"></script>
+    <script type="module" src="js/app.js?v=3"></script>
 
     <!-- Service Worker PWA -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js?v=9').then(registration => {
+                navigator.serviceWorker.register('./sw.js?v=10').then(registration => {
                     console.log('SW registered:', registration);
                     registration.update(); // Forzar actualización cada vez
                 }).catch(registrationError => {
