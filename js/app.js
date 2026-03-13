@@ -4,7 +4,6 @@ import { configurarHistoryAPI, inicializarCloseOnClickOutside } from './ui.js';
 import { cargarBaseDatos, buscarProductos, filtrarCategoria, handleFiltrarCategoria, cerrarModal, cambiarCantModal } from './products.js';
 import { abrirResumenCarrito, vaciarCarrito, generarPedidoWpp, cerrarCarrito } from './cart.js';
 import { abrirModalPDF, cerrarModalPDF } from './pdf.js';
-import { inicializarAdminListeners, cerrarAdmin, checkAccesoAdmin, generarJSONProducto } from './admin.js';
 
 // Inicialización
 window.onload = () => {
@@ -14,7 +13,6 @@ window.onload = () => {
     cargarBaseDatos();
     configurarHistoryAPI();
     inicializarCloseOnClickOutside();
-    inicializarAdminListeners();
     exponerGlobalesAPI();
     inicializarScrollHeader();
 };
@@ -57,10 +55,6 @@ function exponerGlobalesAPI() {
 
     window.abrirModalPDF = abrirModalPDF;
     window.cerrarModalPDF = cerrarModalPDF;
-
-    window.cerrarAdmin = cerrarAdmin;
-    window.checkAccesoAdmin = checkAccesoAdmin;
-    window.generarJSONProducto = generarJSONProducto;
 
     // Funciones de Fullscreen
     window.abrirFullscreenImagen = abrirFullscreenImagen;

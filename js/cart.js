@@ -165,7 +165,6 @@ export function generarPedidoWpp() {
 ━━━━━━━━━━━━━━━━━━━━━━
 ⭐ *GRACIAS POR PREFERIRNOS* ⭐
 🌿 *Jamaica Natural Beauty*
-� Calidad natural para tu belleza
 💚 Productos veganos y eco-friendly`;
 
     window.open(`https://wa.me/${TelefonoEmpresa}?text=${encodeURIComponent(msj)}`, '_blank');

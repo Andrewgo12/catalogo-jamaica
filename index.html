@@ -292,58 +292,14 @@
                 <a href="doc/pdf/pdf_sin_precios.pdf" download="Catalogo_Sin_Precios.pdf" class="btn-secundario"
                     style="text-decoration: none; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; text-align: center; height: auto; line-height: 1.3; border-radius: 12px; padding: 12px; background: white; color: var(--secondary); border: 2px solid #f0e6df; font-weight: 600;">
                     <span style="font-size: 1.2rem; margin-right: 8px;">📖</span> Sin Precios (Solo Visual)
-                </a>
             </div>
         </div>
     </div>
 
-    <!-- FOOTER E ICONO OCULTO PARA PANEL ADMIN -->
+    <!-- FOOTER -->
     <footer class="footer">
         <p>&copy; 2026 Jamaica Natural.</p>
-        <span id="admin-trigger"
-            style="display:inline-block; margin-top:1rem; cursor:pointer; opacity:0; width:20px; height:20px;">.</span>
     </footer>
-
-    <!-- PANEL ADMINISTRADOR (Oculto) -->
-    <div id="admin-panel" class="modal-overlay">
-        <div class="modal-content admin-box" style="max-width:500px">
-            <div class="close-btn" onclick="cerrarAdmin()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18" />
-                    <line x1="6" y1="6" x2="18" y2="18" />
-                </svg></div>
-            <h3 style="margin-bottom:1.5rem; color:var(--primary);">Panel Seguido</h3>
-
-            <div id="login-admin">
-                <input type="password" id="admin-pass" placeholder="Ingresa Clave">
-                <button onclick="checkAccesoAdmin()" class="btn-secundario">Entrar</button>
-            </div>
-
-            <div id="form-registro" class="d-none">
-                <label>ID / Ref:</label><input type="text" id="p-id">
-                <label>Título:</label><input type="text" id="p-titulo">
-                <label>Descripción:</label><textarea id="p-desc"></textarea>
-                <label>Precio:</label><input type="number" id="p-precio">
-                <label>Categoría:</label>
-                <select id="p-categoria">
-                    <option value="capilar">Capilar</option>
-                    <option value="intimo">Íntimo</option>
-                    <option value="facial">Facial</option>
-                    <option value="maquillaje">Maquillaje</option>
-                    <option value="bronceador">Bronceador</option>
-                    <option value="aceite">Aceites</option>
-                    <option value="otros">Otros</option>
-                    <option value="todos">Todos</option>
-                </select>
-                <label>Ruta Min. (png):</label><input type="text" id="p-img-min" value="img/miniaturas/prod_01.png">
-                <label>Ruta Detalle (jpg):</label><input type="text" id="p-img-det" value="img/prod_01.jpeg">
-                <label>Beneficios (comas):</label><textarea id="p-beneficios"></textarea>
-
-                <button class="btn-secundario" onclick="generarJSONProducto()" style="margin-top:10px;">Generar</button>
-                <textarea id="output-json" readonly style="height: 100px; margin-top:1rem;"></textarea>
-            </div>
-        </div>
-    </div>
 
     <!-- JS Modular -->
     <script type="module" src="js/app.js?v=2"></script>
