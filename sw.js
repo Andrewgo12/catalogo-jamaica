@@ -1,6 +1,6 @@
 // sw.js: Service Worker para Caché Offline de la app (PWA)
 
-const CACHE_NAME = 'jamaica-cache-v9';
+const CACHE_NAME = 'jamaica-cache-v20260313115500';
 const urlsToCache = [
     './',
     './index.html',
