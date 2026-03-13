@@ -6,13 +6,17 @@ export function agregarRapido(id) {
     agregarLogica(id, 1);
 }
 
-export function agregarLogica(id, cantNum) {
+export function agregarLogica(id, cantNum, tamano = null, precioEspecifico = null) {
     const prodBD = State.dbProductos.find(p => p.id === id);
     if (!prodBD) return;
 
-    const existeIndex = State.carrito.findIndex(item => item.id === id);
+    let pre = precioEspecifico || prodBD.precio;
+    if (!pre && prodBD.presentaciones) pre = prodBD.presentaciones[0].precio;
+    const tam = tamano || '';
+
+    const existeIndex = State.carrito.findIndex(item => item.id === id && item.tamano === tam);
     if (existeIndex >= 0) State.carrito[existeIndex].cantidad += cantNum;
-    else State.carrito.push({ id: prodBD.id, titulo: prodBD.titulo, precio: prodBD.precio, cantidad: cantNum });
+    else State.carrito.push({ id: prodBD.id, titulo: prodBD.titulo, precio: pre, cantidad: cantNum, tamano: tam });
 
     localStorage.setItem('jamaica_carrito_v2', JSON.stringify(State.carrito));
     actualizarInterfazCarritoResumen();
@@ -41,10 +45,11 @@ export function abrirResumenCarrito() {
         elemList.innerHTML = State.carrito.map((item, index) => {
             const sub = item.precio * item.cantidad;
             total += sub;
+            const tamTexto = item.tamano ? ` (${item.tamano})` : '';
             return `
                 <div class="item-carrito">
                     <div class="item-info">
-                        <h4>REF: ${item.id} - ${item.titulo}</h4>
+                        <h4>REF: ${item.id} - ${item.titulo}${tamTexto}</h4>
                         <p>${item.cantidad} und(s) x ${formatearMoneda(item.precio)}</p>
                     </div>
                     <div class="item-acciones">
@@ -98,15 +103,70 @@ export function vaciarCarrito() {
 export function generarPedidoWpp() {
     if (State.carrito.length === 0) return mostrarToast("Tu pedido está vacío", "error");
 
-    let msj = "Hola Jamaica 🌿. Quiero procesar este pedido:\n\n";
+    // Obtener la URL base del sitio actual
+    const baseUrl = window.location.origin;
+    
+    let msj = `🌿 *JAMAICA NATURAL BEAUTY* 🌿
+━━━━━━━━━━━━━━━━━━━━━━
+✨ *MI PEDIDO CONFIRMADO* ✨
+━━━━━━━━━━━━━━━━━━━━━━
+
+`;
+    
     let total = 0;
+    let contador = 0;
 
     State.carrito.forEach(p => {
         const sub = p.precio * p.cantidad;
         total += sub;
-        msj += `🛍️ *REF ${p.id}* - ${p.titulo}\n    ↳ Cant: ${p.cantidad} = *${formatearMoneda(sub)}*\n\n`;
+        const tamTexto = p.tamano ? ` (${p.tamano})` : '';
+        contador++;
+        
+        // Buscar el producto completo para obtener la imagen
+        const productoCompleto = State.dbProductos.find(prod => prod.id === p.id);
+        const imagenPath = productoCompleto ? productoCompleto.imagen_miniatura : '';
+        const imagenUrl = imagenPath ? `${baseUrl}/${imagenPath}` : '';
+        
+        msj += `🛍️ *PRODUCTO ${contador}*
+`;
+        
+        // Agregar imagen si existe la URL
+        if (imagenUrl) {
+            msj += `📸 ${imagenUrl}
+`;
+        }
+        
+        msj += `🏷️ *REF: ${p.id}*
+💎 ${p.titulo}${tamTexto}
+💰 Precio: ${formatearMoneda(p.precio)}
+📦 Cantidad: ${p.cantidad} und(s)
+💸 Subtotal: *${formatearMoneda(sub)}*
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+`;
     });
 
-    msj += `--- \n💳 *TOTAL A PAGAR: ${formatearMoneda(total)}*`;
+    msj += `💳 *RESUMEN DEL PEDIDO*
+━━━━━━━━━━━━━━━━━━━━━━
+🛒 Total artículos: ${State.carrito.length} productos
+📦 Total unidades: ${State.carrito.reduce((sum, item) => sum + item.cantidad, 0)} und(s)
+💰 *TOTAL A PAGAR: ${formatearMoneda(total)}*
+━━━━━━━━━━━━━━━━━━━━━━
+
+🚚 *DATOS PARA ENVÍO*
+━━━━━━━━━━━━━━━━━━━━━━
+📍 Dirección de entrega:
+📞 Teléfono de contacto:
+🏠 Ciudad y barrio:
+💳 Método de pago:
+📝 Notas adicionales:
+
+━━━━━━━━━━━━━━━━━━━━━━
+⭐ *GRACIAS POR PREFERIRNOS* ⭐
+🌿 *Jamaica Natural Beauty*
+� Calidad natural para tu belleza
+💚 Productos veganos y eco-friendly`;
+
     window.open(`https://wa.me/${TelefonoEmpresa}?text=${encodeURIComponent(msj)}`, '_blank');
 }

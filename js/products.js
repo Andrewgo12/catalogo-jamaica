@@ -37,6 +37,15 @@ export function renderizarCatalogo(lista) {
         const addIcon = agotado ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>`
             : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>`;
 
+        let precioTexto = "";
+        let btnTexto = txtBoton;
+        if (p.presentaciones && p.presentaciones.length > 0) {
+            precioTexto = `Desde ${formatearMoneda(p.presentaciones[0].precio)}`;
+            if (!agotado) btnTexto = 'Opciones';
+        } else {
+            precioTexto = formatearMoneda(p.precio);
+        }
+
         return `
             <div class="card">
                 ${badgeHTML}
@@ -53,11 +62,11 @@ export function renderizarCatalogo(lista) {
                 <div class="card-info">
                     <h3>${p.titulo}</h3>
                     <p class="desc-cortada">${p.descripcion}</p>
-                    <p class="precio">${formatearMoneda(p.precio)}</p>
+                    <p class="precio">${precioTexto}</p>
                     
                     <div class="botones-card">
                         <button class="btn btn-ver btn-info-prod" data-id="${p.id}">${viewIcon} Info</button>
-                        <button class="btn btn-add btn-quick-add" data-id="${p.id}" ${agotado ? 'disabled' : ''}>${addIcon} ${txtBoton}</button>
+                        <button class="btn btn-add btn-quick-add" data-id="${p.id}" ${agotado ? 'disabled' : ''}>${addIcon} ${btnTexto}</button>
                     </div>
                 </div>
             </div>
@@ -76,7 +85,14 @@ function asignarListenersTarjetas() {
         btn.onclick = () => abrirSombraDetalle(btn.dataset.id);
     });
     document.querySelectorAll('.btn-quick-add').forEach(btn => {
-        btn.onclick = () => agregarRapido(btn.dataset.id);
+        btn.onclick = () => {
+            const prod = State.dbProductos.find(p => p.id === btn.dataset.id);
+            if (prod && prod.presentaciones && prod.presentaciones.length > 0) {
+                abrirSombraDetalle(prod.id);
+            } else {
+                agregarRapido(btn.dataset.id);
+            }
+        };
     });
 }
 
@@ -156,10 +172,37 @@ export function abrirSombraDetalle(id) {
     document.getElementById('modal-titulo').innerText = prod.titulo;
     document.getElementById('modal-ref').innerText = `Ref. ${prod.id}`;
     document.getElementById('modal-desc').innerText = prod.descripcion;
-    document.getElementById('modal-precio').innerText = formatearMoneda(prod.precio);
 
     const listaB = document.getElementById('modal-beneficios');
     listaB.innerHTML = prod.beneficios.map(b => `<li>${b}</li>`).join('');
+
+    let precioSeleccionado = prod.precio;
+    let tamañoSeleccionado = null;
+
+    const contPresentaciones = document.getElementById('modal-presentaciones-container');
+    const selectPresentacion = document.getElementById('presentacion-select');
+    const modalPrecio = document.getElementById('modal-precio');
+
+    if (prod.presentaciones && prod.presentaciones.length > 0) {
+        contPresentaciones.style.display = 'block';
+        selectPresentacion.innerHTML = prod.presentaciones.map((pres, i) => 
+            `<option value="${i}">${pres.tamaño} - ${formatearMoneda(pres.precio)}</option>`
+        ).join('');
+        
+        precioSeleccionado = prod.presentaciones[0].precio;
+        tamañoSeleccionado = prod.presentaciones[0].tamaño;
+        modalPrecio.innerText = formatearMoneda(precioSeleccionado);
+
+        selectPresentacion.onchange = (e) => {
+            const index = Number(e.target.value);
+            precioSeleccionado = prod.presentaciones[index].precio;
+            tamañoSeleccionado = prod.presentaciones[index].tamaño;
+            modalPrecio.innerText = formatearMoneda(precioSeleccionado);
+        };
+    } else {
+        contPresentaciones.style.display = 'none';
+        modalPrecio.innerText = formatearMoneda(prod.precio);
+    }
 
     const btnAdd = document.getElementById('btn-add-modal');
     if (prod.disponible === false) {
@@ -169,7 +212,7 @@ export function abrirSombraDetalle(id) {
         btnAdd.innerText = "Agregar a mi pedido";
         btnAdd.disabled = false;
         btnAdd.onclick = () => {
-            agregarLogica(id, parseInt(document.getElementById('cant-prod').value));
+            agregarLogica(id, parseInt(document.getElementById('cant-prod').value), tamañoSeleccionado, precioSeleccionado);
             cerrarModal();
         };
     }

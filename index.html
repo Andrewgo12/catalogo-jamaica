@@ -76,6 +76,10 @@
                 </svg> PDF
             </button>
         </div>
+
+        <div style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">
+            💡 Algunos productos tienen <b>múltiples tamaños</b>, presiona "Info" para verlos.
+        </div>
     </div>
 
     <!-- CONTENEDOR CATÁLOGO DE PRODUCTOS -->
@@ -150,6 +154,15 @@
                     <p id="modal-desc" class="desc-text"></p>
                     <p class="precio-destacado" id="modal-precio"></p>
 
+                    <div id="modal-presentaciones-container"
+                        style="display: none; margin-bottom: 15px; text-align: left;">
+                        <label for="presentacion-select"
+                            style="font-weight: 600; font-size: 0.9rem; color: var(--text);">Elige una opción:</label>
+                        <select id="presentacion-select"
+                            style="width: 100%; padding: 12px; margin-top: 5px; border-radius: 8px; border: 2px solid #f0e6df; font-size: 1rem; background-color: #fff; cursor: pointer; outline: none; transition: border-color 0.3s ease;">
+                        </select>
+                    </div>
+
                     <h3 class="beneficios-title">Beneficios destacados</h3>
                     <ul id="modal-beneficios"></ul>
 
@@ -187,7 +200,8 @@
                 </svg>
             </div>
             <div style="text-align:center; padding-top: 10px;">
-                <img src="img/logooriginal.jpeg" alt="Logotipo" style="width: 175px; height: auto; border-radius: 12px; object-fit: contain; border: 3px solid white; box-shadow: 0 4px 15px rgba(217, 119, 127, 0.2);">
+                <img src="img/logooriginal.jpeg" alt="Logotipo"
+                    style="width: 175px; height: auto; border-radius: 12px; object-fit: contain; border: 3px solid white; box-shadow: 0 4px 15px rgba(217, 119, 127, 0.2);">
             </div>
             <h2 style="text-align: center; margin-top: 10px;">Tu Pedido</h2>
             <div id="carrito-lista"></div>
@@ -241,35 +255,42 @@
     <!-- MODAL DE DESCARGAS DE CATÁLOGO (PDF / EXCEL) -->
     <div id="modal-pdf" class="modal-overlay">
         <!-- Añadimos width: 95%, max-height: 90vh limit y overflow-y: auto para que pueda hacer scroll en células pequeñas sin ser cortado -->
-        <div class="modal-content" style="width: 95%; max-width: 450px; max-height: 90vh; overflow-y: auto; padding: 2rem 1.5rem; border-radius: 20px;">
+        <div class="modal-content"
+            style="width: 95%; max-width: 450px; max-height: 90vh; overflow-y: auto; padding: 2rem 1.5rem; border-radius: 20px;">
             <div class="close-btn" onclick="cerrarModalPDF()">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="18" y1="6" x2="6" y2="18" />
                     <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
             </div>
-            
+
             <div style="text-align:center; padding-top: 10px; margin-bottom: 20px;">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="background: #fff0f2; padding: 10px; border-radius: 50%;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="background: #fff0f2; padding: 10px; border-radius: 50%;">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                     <polyline points="7 10 12 15 17 10"></polyline>
                     <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
                 <h2 style="margin-top: 15px; color: var(--secondary); font-size: 1.5rem;">Descargar Catálogo</h2>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">Selecciona el formato que deseas descargar.</p>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">Selecciona el formato que
+                    deseas descargar.</p>
             </div>
 
             <!-- Se añadió height: auto y flex-wrap para que el texto si es muy largo baje suavemente sin salirse del botón -->
             <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
-                <a href="doc/pdf/Catalogo-Jamaica.pdf" download="Catalogo_Precios_Individual.pdf" class="btn-secundario" style="text-decoration: none; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; text-align: center; height: auto; line-height: 1.3; border-radius: 12px; padding: 12px; background: white; color: var(--secondary); border: 2px solid #f0e6df; font-weight: 600;">
+                <a href="doc/pdf/Catalogo-Jamaica.pdf" download="Catalogo_Precios_Individual.pdf" class="btn-secundario"
+                    style="text-decoration: none; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; text-align: center; height: auto; line-height: 1.3; border-radius: 12px; padding: 12px; background: white; color: var(--secondary); border: 2px solid #f0e6df; font-weight: 600;">
                     <span style="font-size: 1.2rem; margin-right: 8px;">🛍️</span> Con Precios (Individual)
                 </a>
-                
-                <a href="doc/pdf/TabladePrecios.xlsx" download="Tabla_Precios_Mayorista.xlsx" class="btn-secundario" style="text-decoration: none; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; text-align: center; height: auto; line-height: 1.3; border-radius: 12px; padding: 12px; background: white; color: var(--secondary); border: 2px solid #f0e6df; font-weight: 600;">
+
+                <a href="doc/pdf/TabladePrecios.xlsx" download="Tabla_Precios_Mayorista.xlsx" class="btn-secundario"
+                    style="text-decoration: none; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; text-align: center; height: auto; line-height: 1.3; border-radius: 12px; padding: 12px; background: white; color: var(--secondary); border: 2px solid #f0e6df; font-weight: 600;">
                     <span style="font-size: 1.2rem; margin-right: 8px;">📦</span> Precios al por Mayor (Excel)
                 </a>
-                
-                <a href="doc/pdf/pdf_sin_precios.pdf" download="Catalogo_Sin_Precios.pdf" class="btn-secundario" style="text-decoration: none; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; text-align: center; height: auto; line-height: 1.3; border-radius: 12px; padding: 12px; background: white; color: var(--secondary); border: 2px solid #f0e6df; font-weight: 600;">
+
+                <a href="doc/pdf/pdf_sin_precios.pdf" download="Catalogo_Sin_Precios.pdf" class="btn-secundario"
+                    style="text-decoration: none; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; text-align: center; height: auto; line-height: 1.3; border-radius: 12px; padding: 12px; background: white; color: var(--secondary); border: 2px solid #f0e6df; font-weight: 600;">
                     <span style="font-size: 1.2rem; margin-right: 8px;">📖</span> Sin Precios (Solo Visual)
                 </a>
             </div>
