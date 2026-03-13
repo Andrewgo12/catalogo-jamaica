@@ -10,17 +10,17 @@
     <meta property="og:title" content="Jamaica - Natural Beauty">
     <meta property="og:description" content="Productos de belleza natural y cuidado corporal de alta gama.">
     <!-- CSS Modulares con cache busting -->
-    <link rel="stylesheet" href="css/base.css?v=20260313115500">
-    <link rel="stylesheet" href="css/animations.css?v=20260313115500">
-    <link rel="stylesheet" href="css/components.css?v=20260313115500">
-    <link rel="stylesheet" href="css/modals.css?v=20260313115500">
-    <link rel="stylesheet" href="css/responsive.css?v=20260313115500">
+    <link rel="stylesheet" href="css/base.css?v=20260313155215">
+    <link rel="stylesheet" href="css/animations.css?v=20260313155215">
+    <link rel="stylesheet" href="css/components.css?v=20260313155215">
+    <link rel="stylesheet" href="css/modals.css?v=20260313155215">
+    <link rel="stylesheet" href="css/responsive.css?v=20260313155215">
 
     <!-- PWA Settings -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#f43f5e">
     <link rel="apple-touch-icon" href="img/logooriginal.jpeg">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Jamaica">
 </head>
@@ -318,13 +318,13 @@
     </footer>
 
     <!-- JS Modular con cache busting -->
-    <script type="module" src="js/app.js?v=20260313115500"></script>
+    <script type="module" src="js/app.js?v=20260313155215"></script>
 
     <!-- Service Worker PWA -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js?v=20260313115500').then(registration => {
+                navigator.serviceWorker.register('./sw.js?v=20260313155215').then(registration => {
                     console.log('SW registered:', registration);
                     registration.update(); // Forzar actualización cada vez
                 }).catch(registrationError => {

@@ -26,6 +26,7 @@ export const State = {
 
 // Formatear moneda
 export function formatearMoneda(valor) {
+    if (valor === undefined || valor === null) return "$0";
     return "$" + valor.toLocaleString('es-CO');
 }
 

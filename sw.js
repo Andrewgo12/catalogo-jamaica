@@ -1,6 +1,6 @@
 // sw.js: Service Worker para Caché Offline de la app (PWA)
 
-const CACHE_NAME = 'jamaica-cache-v20260313115500';
+const CACHE_NAME = 'jamaica-cache-v20260313155400';
 const urlsToCache = [
     './',
     './index.html',
@@ -22,6 +22,8 @@ const urlsToCache = [
 
 // Instalamos el Service Worker y abrimos el Caché
 self.addEventListener('install', event => {
+    // Forzar activación inmediata saltando la espera
+    self.skipWaiting();
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
@@ -33,30 +35,57 @@ self.addEventListener('install', event => {
 
 // Respondiendo con Caché cuando estemos offline
 self.addEventListener('fetch', event => {
-    event.respondWith(
-        caches.match(event.request)
-            .then(response => {
-                // Cache hit - devuelve la respuesta
-                if (response) {
-                    return response;
-                }
-                return fetch(event.request);
-            })
-    );
+    const isJsonData = event.request.url.includes('productos.json');
+
+    if (isJsonData) {
+        // Para productos.json: NETWORK FIRST
+        event.respondWith(
+            fetch(event.request)
+                .then(networkResponse => {
+                    return caches.open(CACHE_NAME).then(cache => {
+                        cache.put(event.request, networkResponse.clone());
+                        return networkResponse;
+                    });
+                })
+                .catch(() => {
+                    return caches.match(event.request);
+                })
+        );
+    } else {
+        // Resto de los archivos: CACHE FIRST
+        event.respondWith(
+            caches.match(event.request)
+                .then(response => {
+                    if (response) {
+                        return response;
+                    }
+                    return fetch(event.request).then(networkResponse => {
+                        return networkResponse;
+                    }).catch(() => {
+                        // Si falla la red y no hay caché, devolver respuesta vacía
+                        return new Response('', { status: 408, statusText: 'Offline' });
+                    });
+                })
+        );
+    }
 });
 
 // Actualizando Caché (Limpieza de versiones antiguas)
 self.addEventListener('activate', event => {
-    const cacheWhitelist = [CACHE_NAME];
     event.waitUntil(
         caches.keys().then(cacheNames => {
             return Promise.all(
                 cacheNames.map(cacheName => {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
+                    if (cacheName !== CACHE_NAME) {
+                        console.log('SW: Borrando caché antiguo', cacheName);
                         return caches.delete(cacheName);
                     }
                 })
             );
+        }).then(() => {
+            console.log('SW: Controlando clientes inmediatamente');
+            // Tomar el control de todas las pestañas abiertas inmediatamente
+            return self.clients.claim();
         })
     );
 });

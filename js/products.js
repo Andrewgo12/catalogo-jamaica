@@ -43,7 +43,8 @@ export function renderizarCatalogo(lista) {
             precioTexto = `Desde ${formatearMoneda(p.presentaciones[0].precio)}`;
             if (!agotado) btnTexto = 'Opciones';
         } else {
-            precioTexto = formatearMoneda(p.precio);
+            precioTexto = p.precio ? formatearMoneda(p.precio) : '💬 Precio a convenir';
+            if (!p.precio && !agotado) btnTexto = 'Consultar';
         }
 
         return `
@@ -52,7 +53,7 @@ export function renderizarCatalogo(lista) {
                 ${ofertaHTML}
                 
                 <div class="card-img-container">
-                    <img src="${p.imagen_miniatura}" alt="${p.titulo}" class="${claseAgotado}" loading="lazy" onerror="this.src='https://via.placeholder.com/300?text=Beauty'">
+                    <img src="${p.imagen_miniatura || 'img/logooriginal.jpeg'}" alt="${p.titulo}" class="${claseAgotado}" loading="lazy" onerror="this.onerror=null;this.src='img/logooriginal.jpeg'">
                 </div>
                 
                 <button class="btn-fav ${esFav}" data-id="${p.id}" id="fav-${p.id}" aria-label="Favorito">
@@ -182,6 +183,15 @@ export function abrirSombraDetalle(id) {
     const contPresentaciones = document.getElementById('modal-presentaciones-container');
     const selectPresentacion = document.getElementById('presentacion-select');
     const modalPrecio = document.getElementById('modal-precio');
+    const inputCant = document.getElementById('cant-prod');
+
+    const checkMinimoMayorista = (tam) => {
+        if (tam && tam.includes('x6+')) {
+            if (parseInt(inputCant.value) < 6) {
+                inputCant.value = 6;
+            }
+        }
+    };
 
     if (prod.presentaciones && prod.presentaciones.length > 0) {
         contPresentaciones.style.display = 'block';
@@ -192,12 +202,14 @@ export function abrirSombraDetalle(id) {
         precioSeleccionado = prod.presentaciones[0].precio;
         tamañoSeleccionado = prod.presentaciones[0].tamaño;
         modalPrecio.innerText = formatearMoneda(precioSeleccionado);
+        checkMinimoMayorista(tamañoSeleccionado);
 
         selectPresentacion.onchange = (e) => {
             const index = Number(e.target.value);
             precioSeleccionado = prod.presentaciones[index].precio;
             tamañoSeleccionado = prod.presentaciones[index].tamaño;
             modalPrecio.innerText = formatearMoneda(precioSeleccionado);
+            checkMinimoMayorista(tamañoSeleccionado);
         };
     } else {
         contPresentaciones.style.display = 'none';
@@ -212,7 +224,11 @@ export function abrirSombraDetalle(id) {
         btnAdd.innerText = "Agregar a mi pedido";
         btnAdd.disabled = false;
         btnAdd.onclick = () => {
-            agregarLogica(id, parseInt(document.getElementById('cant-prod').value), tamañoSeleccionado, precioSeleccionado);
+            let finalCant = parseInt(inputCant.value) || 1;
+            if (tamañoSeleccionado && tamañoSeleccionado.includes('x6+') && finalCant < 6) {
+                finalCant = 6;
+            }
+            agregarLogica(id, finalCant, tamañoSeleccionado, precioSeleccionado);
             cerrarModal();
         };
     }
@@ -233,7 +249,21 @@ export function cerrarModal(goBack = true) {
 export function cambiarCantModal(delta) {
     const input = document.getElementById('cant-prod');
     let val = parseInt(input.value) + delta;
-    input.value = val < 1 ? 1 : val;
+    
+    let minCant = 1;
+    const select = document.getElementById('presentacion-select');
+    if (select && select.offsetParent !== null) { // Está visible
+        const txt = select.options[select.selectedIndex].text;
+        if (txt.includes('x6+')) minCant = 6;
+    }
+
+    if (val < minCant) {
+        val = minCant;
+        if (minCant === 6 && delta < 0) {
+            import('./ui.js').then(ui => ui.mostrarToast("Mínimo al por mayor: 6 unds", "error"));
+        }
+    }
+    input.value = val;
 }
 
 export function handleFiltrarCategoria(cat) {
