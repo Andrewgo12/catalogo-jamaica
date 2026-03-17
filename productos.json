@@ -15,23 +15,14 @@
     "imagen_detalle": "img/prod_01_tratamientocapilarintensivo.jpeg",
     "presentaciones": [
       {
-        "tamaño": "250 ml (x6+)",
-        "precio": 25000.0
-      },
-      {
         "tamaño": "250 ml",
         "precio": 35000
-      },
-      {
-        "tamaño": "500 ml (x6+)",
-        "precio": 35000.0
       },
       {
         "tamaño": "500 ml",
         "precio": 48000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -49,15 +40,10 @@
     "imagen_detalle": "img/prod_26TratamientoDeChocoterapia.jpeg",
     "presentaciones": [
       {
-        "tamaño": "500 ml (x6+)",
-        "precio": 35000.0
-      },
-      {
         "tamaño": "500 ml",
         "precio": 48000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -75,15 +61,10 @@
     "imagen_detalle": "img/prod_23CremaParaPeinar.jpeg",
     "presentaciones": [
       {
-        "tamaño": "390 ml (x6+)",
-        "precio": 28000.0
-      },
-      {
         "tamaño": "390 ml",
         "precio": 40000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -101,15 +82,10 @@
     "imagen_detalle": "img/prod_02Aceitemultiproposito.jpeg",
     "presentaciones": [
       {
-        "tamaño": "120 ml (x6+)",
-        "precio": 20000.0
-      },
-      {
         "tamaño": "120 ml",
         "precio": 28000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -127,15 +103,10 @@
     "imagen_detalle": "img/prod_07TermoProtector.jpeg",
     "presentaciones": [
       {
-        "tamaño": "240 ml (x6+)",
-        "precio": 25000.0
-      },
-      {
         "tamaño": "240 ml",
         "precio": 35000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -153,15 +124,10 @@
     "imagen_detalle": "img/prod_09TonicoCapilar.jpeg",
     "presentaciones": [
       {
-        "tamaño": "120 ml (x6+)",
-        "precio": 20000.0
-      },
-      {
         "tamaño": "120 ml",
         "precio": 30000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -179,15 +145,10 @@
     "imagen_detalle": "img/prod_02Aceitemultiproposito.jpeg",
     "presentaciones": [
       {
-        "tamaño": "30 ml (x6+)",
-        "precio": 19200.0
-      },
-      {
         "tamaño": "30 ml",
         "precio": 32000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -205,15 +166,10 @@
     "imagen_detalle": "img/prod_28MascarillaCapilarCandyPop.jpeg",
     "presentaciones": [
       {
-        "tamaño": "1 unidad (x6+)",
-        "precio": 9000.0
-      },
-      {
         "tamaño": "1 unidad",
         "precio": 15000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -231,23 +187,14 @@
     "imagen_detalle": "img/prod_29TratamientoCapilarIntensivo.jpeg",
     "presentaciones": [
       {
-        "tamaño": "250 ml (x6+)",
-        "precio": 25000.0
-      },
-      {
         "tamaño": "250 ml",
         "precio": 36000
-      },
-      {
-        "tamaño": "500 ml (x6+)",
-        "precio": 36000.0
       },
       {
         "tamaño": "500 ml",
         "precio": 48000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -265,23 +212,14 @@
     "imagen_detalle": "img/prod_31ShampooUltraNutritivo.jpeg",
     "presentaciones": [
       {
-        "tamaño": "250 ml (x6+)",
-        "precio": 26000.0
-      },
-      {
         "tamaño": "250 ml",
         "precio": 35000
-      },
-      {
-        "tamaño": "500 ml (x6+)",
-        "precio": 35000.0
       },
       {
         "tamaño": "500 ml",
         "precio": 45000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -299,23 +237,14 @@
     "imagen_detalle": "img/prod_12ShampooCeboollaYRomero.jpeg",
     "presentaciones": [
       {
-        "tamaño": "250 ml (x6+)",
-        "precio": 26000.0
-      },
-      {
         "tamaño": "250 ml",
         "precio": 35000
-      },
-      {
-        "tamaño": "500 ml (x6+)",
-        "precio": 35000.0
       },
       {
         "tamaño": "500 ml",
         "precio": 45000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -333,15 +262,10 @@
     "imagen_detalle": "img/prod_08ShampooDetox.jpeg",
     "presentaciones": [
       {
-        "tamaño": "500 ml (x6+)",
-        "precio": 33000.0
-      },
-      {
         "tamaño": "500 ml",
         "precio": 48000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -359,23 +283,14 @@
     "imagen_detalle": "img/prod_06AcondicionadorDeCeboolaYRomero.jpeg",
     "presentaciones": [
       {
-        "tamaño": "250 ml (x6+)",
-        "precio": 26000.0
-      },
-      {
         "tamaño": "250 ml",
         "precio": 36000
-      },
-      {
-        "tamaño": "500 ml (x6+)",
-        "precio": 36000.0
       },
       {
         "tamaño": "500 ml",
         "precio": 46000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -393,23 +308,14 @@
     "imagen_detalle": "img/prod_06AcondicionadorDeCeboolaYRomero.jpeg",
     "presentaciones": [
       {
-        "tamaño": "250 ml (x6+)",
-        "precio": 26000.0
-      },
-      {
         "tamaño": "250 ml",
         "precio": 36000
-      },
-      {
-        "tamaño": "500 ml (x6+)",
-        "precio": 36000.0
       },
       {
         "tamaño": "500 ml",
         "precio": 46000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -427,15 +333,10 @@
     "imagen_detalle": "img/prod_06AcondicionadorDeCeboolaYRomero.jpeg",
     "presentaciones": [
       {
-        "tamaño": "250 ml (x6+)",
-        "precio": 26000.0
-      },
-      {
         "tamaño": "250 ml",
         "precio": 36000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -453,15 +354,10 @@
     "imagen_detalle": "img/prod_11LipstickUva.jpeg",
     "presentaciones": [
       {
-        "tamaño": "5 g (x6+)",
-        "precio": 7500.0
-      },
-      {
         "tamaño": "5 g",
         "precio": 12000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -479,15 +375,10 @@
     "imagen_detalle": "img/LIPSTICKROSA.png",
     "presentaciones": [
       {
-        "tamaño": "10 g (x6+)",
-        "precio": 9000.0
-      },
-      {
         "tamaño": "10 g",
         "precio": 12000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -505,15 +396,10 @@
     "imagen_detalle": "img/prod_30LipstickFrutosRojos.jpeg",
     "presentaciones": [
       {
-        "tamaño": "5 g (x6+)",
-        "precio": 7500.0
-      },
-      {
         "tamaño": "5 g",
         "precio": 12000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -531,15 +417,10 @@
     "imagen_detalle": "img/prod_27SplashCapilaryCorporal.jpeg",
     "presentaciones": [
       {
-        "tamaño": "210 ml (x6+)",
-        "precio": 30000.0
-      },
-      {
         "tamaño": "210 ml",
         "precio": 40000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -557,15 +438,10 @@
     "imagen_detalle": "img/prod_03Mantequillacorporal.jpeg",
     "presentaciones": [
       {
-        "tamaño": "200 ml (x6+)",
-        "precio": 28000.0
-      },
-      {
         "tamaño": "200 ml",
         "precio": 38000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -583,15 +459,10 @@
     "imagen_detalle": "img/MantequillaCorporalSummerClouds.png",
     "presentaciones": [
       {
-        "tamaño": "1 unidad (x6+)",
-        "precio": 30000.0
-      },
-      {
         "tamaño": "1 unidad",
         "precio": 40000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -609,10 +480,6 @@
     "imagen_detalle": "img/prod_04AsoleadorBronceador.jpeg",
     "presentaciones": [
       {
-        "tamaño": "130 ml (x6+)",
-        "precio": 55000.0
-      },
-      {
         "tamaño": "130 ml",
         "precio": 70000
       },
@@ -620,8 +487,7 @@
         "tamaño": "Asoleador",
         "precio": 40000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -639,15 +505,10 @@
     "imagen_detalle": "img/prod_05AceiteBifasicoFemenino.jpeg",
     "presentaciones": [
       {
-        "tamaño": "60 ml (x6+)",
-        "precio": 49000.0
-      },
-      {
         "tamaño": "60 ml",
         "precio": 60000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -665,15 +526,10 @@
     "imagen_detalle": "img/prod_15AceiteBifasicoHombre.jpeg",
     "presentaciones": [
       {
-        "tamaño": "60 ml (x6+)",
-        "precio": 49000.0
-      },
-      {
         "tamaño": "60 ml",
         "precio": 60000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -687,15 +543,10 @@
     "imagen_detalle": "img/prod_33bokiniBronceo.jpeg",
     "presentaciones": [
       {
-        "tamaño": "1 unidad (x6+)",
-        "precio": 28000.0
-      },
-      {
         "tamaño": "1 unidad",
         "precio": 40000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -709,15 +560,10 @@
     "imagen_detalle": "img/prod_32GorrodeAluminio.jpeg",
     "presentaciones": [
       {
-        "tamaño": "1 unidad (x6+)",
-        "precio": 4000.0
-      },
-      {
         "tamaño": "1 unidad",
         "precio": 6000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -729,8 +575,7 @@
     "beneficios": [],
     "imagen_miniatura": "img/miniaturas/Salidasdebaño.png",
     "imagen_detalle": "img/Salidasdebaño.png",
-    "presentaciones": [],
-    "precio": 0
+    "presentaciones": []
   },
   {
     "disponible": true,
@@ -744,15 +589,10 @@
     "imagen_detalle": "img/prod_10GorroSeda.jpeg",
     "presentaciones": [
       {
-        "tamaño": "1 unidad (x6+)",
-        "precio": 12000.0
-      },
-      {
         "tamaño": "1 unidad",
         "precio": 18000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -766,15 +606,10 @@
     "imagen_detalle": "img/prod_24Seditasparaeliminargrasadelrostro .jpeg",
     "presentaciones": [
       {
-        "tamaño": "1 unidad (x6+)",
-        "precio": 6500.0
-      },
-      {
         "tamaño": "1 unidad",
         "precio": 8000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -788,15 +623,10 @@
     "imagen_detalle": "img/prod_20MasajeadorCapilarRedondo.jpeg",
     "presentaciones": [
       {
-        "tamaño": "1 unidad (x6+)",
-        "precio": 10000.0
-      },
-      {
         "tamaño": "1 unidad",
         "precio": 18000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -810,15 +640,10 @@
     "imagen_detalle": "img/prod_19MasajeadorCapilarPala.jpeg",
     "presentaciones": [
       {
-        "tamaño": "1 unidad (x6+)",
-        "precio": 10000.0
-      },
-      {
         "tamaño": "1 unidad",
         "precio": 18000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -832,15 +657,10 @@
     "imagen_detalle": "img/prod_21HumectantePárpado.jpeg",
     "presentaciones": [
       {
-        "tamaño": "1 unidad (x6+)",
-        "precio": 3000.0
-      },
-      {
         "tamaño": "1 unidad",
         "precio": 5000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -854,15 +674,10 @@
     "imagen_detalle": "img/prod_22HumectanteLabios.jpeg",
     "presentaciones": [
       {
-        "tamaño": "1 unidad (x6+)",
-        "precio": 4000.0
-      },
-      {
         "tamaño": "1 unidad",
         "precio": 7000
       }
-    ],
-    "precio": 0
+    ]
   },
   {
     "disponible": true,
@@ -874,8 +689,7 @@
     "beneficios": [],
     "imagen_miniatura": "img/miniaturas/KitHidratacionFacial.png",
     "imagen_detalle": "img/prod_13KitHidratacionFacial.jpeg",
-    "presentaciones": [],
-    "precio": 0
+    "presentaciones": []
   },
   {
     "disponible": true,
@@ -887,8 +701,7 @@
     "beneficios": [],
     "imagen_miniatura": "img/miniaturas/AceitebifacicoHombreYMujer.png",
     "imagen_detalle": "img/prod_14KitAceitebifacicoHombreYMujer.jpeg",
-    "presentaciones": [],
-    "precio": 0
+    "presentaciones": []
   },
   {
     "disponible": true,
@@ -900,8 +713,7 @@
     "beneficios": [],
     "imagen_miniatura": "img/miniaturas/MoñaFlorDorada.png",
     "imagen_detalle": "img/prod_16FlorDorada.jpeg",
-    "presentaciones": [],
-    "precio": 0
+    "presentaciones": []
   },
   {
     "disponible": true,
@@ -913,8 +725,7 @@
     "beneficios": [],
     "imagen_miniatura": "img/miniaturas/KitLineadeTratamientoCapilar.png",
     "imagen_detalle": "img/prod_17KitLineadeTratamientoCapilar.jpeg",
-    "presentaciones": [],
-    "precio": 0
+    "presentaciones": []
   },
   {
     "disponible": true,
@@ -926,7 +737,6 @@
     "beneficios": [],
     "imagen_miniatura": "img/miniaturas/KitLineaDeShampooNatural.png",
     "imagen_detalle": "img/prod_18KitLineaDeShampooNatural.jpeg",
-    "presentaciones": [],
-    "precio": 0
+    "presentaciones": []
   }
 ]

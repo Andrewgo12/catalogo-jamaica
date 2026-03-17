@@ -103,82 +103,50 @@ export function vaciarCarrito() {
 export function generarPedidoWpp() {
     if (State.carrito.length === 0) return mostrarToast("Tu pedido está vacío", "error");
 
-    // Obtener la URL base del sitio actual
     const baseUrl = window.location.origin;
     
-    let msj = `🌿 *JAMAICA NATURAL BEAUTY* 🌿
-━━━━━━━━━━━━━━━━━━━━━━
-✨ *MI PEDIDO CONFIRMADO* ✨
-━━━━━━━━━━━━━━━━━━━━━━
+    let msj = `🌿 *NUEVO PEDIDO - JAMAICA COSMETICS* 🌿
 
+¡Hola! Quiero confirmar mi pedido:
+
+🛍️ *MI CARRITO:*
+-----------------------------------------------
 `;
     
     let total = 0;
-    let contador = 0;
 
     State.carrito.forEach(p => {
         const sub = p.precio * p.cantidad;
         total += sub;
         const tamTexto = p.tamano ? ` (${p.tamano})` : '';
-        contador++;
         
-        // Buscar el producto completo para obtener la imagen
-        const productoCompleto = State.dbProductos.find(prod => prod.id === p.id);
-        const imagenPath = productoCompleto ? productoCompleto.imagen_miniatura : '';
-        const imagenUrl = imagenPath ? `${baseUrl}/${imagenPath}` : '';
-        
-        msj += `🛍️ *PRODUCTO ${contador}*
-`;
-        
-        // Agregar imagen si existe la URL
-        if (imagenUrl) {
-            msj += `📸 ${imagenUrl}
-`;
-        }
-        
-        msj += `🏷️ *REF: ${p.id}*
-💎 ${p.titulo}${tamTexto}
-💰 Precio: ${formatearMoneda(p.precio)}
-📦 Cantidad: ${p.cantidad} und(s)
-💸 Subtotal: *${formatearMoneda(sub)}*
-
-━━━━━━━━━━━━━━━━━━━━━━
-
+        msj += `▪ *[REF: ${p.id}]* ${p.titulo}${tamTexto}
+   📦 ${p.cantidad} x ${formatearMoneda(p.precio)}
+   💸 *${formatearMoneda(sub)}*
 `;
     });
 
-    msj += `💳 *RESUMEN DEL PEDIDO*
-━━━━━━━━━━━━━━━━━━━━━━
-🛒 Total artículos: ${State.carrito.length} productos
-📦 Total unidades: ${State.carrito.reduce((sum, item) => sum + item.cantidad, 0)} und(s)
-💰 *TOTAL A PAGAR: ${formatearMoneda(total)}*
-━━━━━━━━━━━━━━━━━━━━━━
+    msj += `-----------------------------------------------
+*💰 TOTAL A PAGAR: ${formatearMoneda(total)}*
+_(Cantidad de productos: ${State.carrito.reduce((sum, item) => sum + item.cantidad, 0)})_
 
-� *MÉTODOS DE PAGO*
-━━━━━━━━━━━━━━━━━━━━━━
+*💳 MÉTODOS DE PAGO:*
 📱 *Nequi:* 3107167474
-🏦 *Bancolombia:* Cuenta de Ahorro 85103093321
+🏦 *Bancolombia:* Cta. Ahorros 85103093321
 
-👩‍💼 *VENDEDORA*
-━━━━━━━━━━━━━━━━━━━━━━
-� *Yuli Aranda*
-📞 *3107167474*
+*👩🏻‍💼 ASESORA:* Yuli Aranda (3107167474)
 
-📋 *TUS DATOS PERSONALES*
-━━━━━━━━━━━━━━━━━━━━━━
-👤 Nombre completo:
-📞 Tu teléfono:
-📍 Dirección de entrega:
-🏠 Ciudad y barrio:
-💳 Método de pago elegido:
-📝 Notas adicionales:
+*📋 MIS DATOS PARA EL ENVÍO:*
+👤 Nombre completo: 
+📞 Mi teléfono: 
+📍 Dirección: 
+🏠 Ciudad/Barrio: 
+💳 Método de pago: 
+📝 Notas: 
 
-✅ *Por favor envía comprobante de pago junto con tus datos*
+_(Por favor envía el comprobante de pago junto con estos datos completados para confirmar)._
 
-━━━━━━━━━━━━━━━━━━━━━━
-⭐ *GRACIAS POR PREFERIRNOS* ⭐
-🌿 *Jamaica Natural Beauty*
-💚 Productos veganos y eco-friendly`;
+¡Gracias por preferir a *Jamaica Cosmetics*! 💚`;
 
     window.open(`https://wa.me/${TelefonoEmpresa}?text=${encodeURIComponent(msj)}`, '_blank');
 }
