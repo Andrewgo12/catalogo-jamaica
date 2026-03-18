@@ -53,7 +53,7 @@ export function renderizarCatalogo(lista) {
                 ${ofertaHTML}
                 
                 <div class="card-img-container">
-                    <img src="${p.imagen_miniatura || 'img/logooriginal.jpeg'}" alt="${p.titulo}" class="${claseAgotado}" loading="lazy" onerror="this.onerror=null;this.src='img/logooriginal.jpeg'">
+                    <img src="${p.imagen_detalle || 'img/logooriginal.jpeg'}" alt="${p.titulo}" class="${claseAgotado}" loading="lazy" onerror="this.onerror=null;this.src='img/logooriginal.jpeg'">
                 </div>
                 
                 <button class="btn-fav ${esFav}" data-id="${p.id}" id="fav-${p.id}" aria-label="Favorito">

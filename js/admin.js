@@ -32,7 +32,6 @@ export function generarJSONProducto() {
         titulo: document.getElementById('p-titulo').value.trim(),
         descripcion: document.getElementById('p-desc').value.trim(),
         precio: parseInt(document.getElementById('p-precio').value),
-        imagen_miniatura: document.getElementById('p-img-min').value.trim(),
         imagen_detalle: document.getElementById('p-img-det').value.trim(),
         beneficios: document.getElementById('p-beneficios').value.split(',').map(s => s.trim()).filter(Boolean),
         disponible: true,

@@ -20,9 +20,7 @@ Catálogo virtual de productos de belleza natural y cuidado personal.
 ├── sw.js              # Service Worker (offline)
 ├── css/               # Estilos modulares
 ├── js/                # Lógica JavaScript
-├── img/               # Imágenes de productos
-│   ├── miniaturas/    # Miniaturas PNG (sin fondo)
-│   └── *.jpeg         # Imágenes completas
+├── img/               # Imágenes de productos (JPEG)
 └── README.md          # Este archivo
 ```
 
@@ -53,7 +51,7 @@ Catálogo virtual de productos de belleza natural y cuidado personal.
 
 ### **Actualizar productos**:
 1. Edita `productos.json`
-2. Agrega nuevas imágenes a `img/` y `img/miniaturas/`
+2. Agrega nuevas imágenes a `img/`
 3. Haz commit y push
 
 ### **Panel Admin**:
@@ -62,8 +60,7 @@ Catálogo virtual de productos de belleza natural y cuidado personal.
 - Genera JSON para nuevos productos
 
 ### **Imágenes**:
-- **JPEG**: Para vistas detalladas (alta calidad)
-- **PNG**: Para miniaturas (sin fondo, tamaño optimizado)
+- **JPEG**: Imágenes de productos (alta calidad)
 
 ## 🛠 Tecnologías
 

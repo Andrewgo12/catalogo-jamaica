@@ -11,7 +11,6 @@
       "Repara puntas",
       "Sin siliconas"
     ],
-    "imagen_miniatura": "img/miniaturas/TratamientoapilarIntensivo.png",
     "imagen_detalle": "img/prod_01_tratamientocapilarintensivo.jpeg",
     "presentaciones": [
       {
@@ -36,7 +35,6 @@
       "Suavidad",
       "Aroma delicioso"
     ],
-    "imagen_miniatura": "img/miniaturas/Tratamientodechocolate.png",
     "imagen_detalle": "img/prod_26TratamientoDeChocoterapia.jpeg",
     "presentaciones": [
       {
@@ -57,7 +55,6 @@
       "Desenredo fácil",
       "Protección"
     ],
-    "imagen_miniatura": "img/miniaturas/CremaParaPeinar.png",
     "imagen_detalle": "img/prod_23CremaParaPeinar.jpeg",
     "presentaciones": [
       {
@@ -78,7 +75,6 @@
       "Antienvejecimiento capilar",
       "Sedosidad"
     ],
-    "imagen_miniatura": "img/miniaturas/AceiteMultiProposito.png",
     "imagen_detalle": "img/prod_02Aceitemultiproposito.jpeg",
     "presentaciones": [
       {
@@ -99,7 +95,6 @@
       "Brillo",
       "Evita quiebre"
     ],
-    "imagen_miniatura": "img/miniaturas/TermoProtector.png",
     "imagen_detalle": "img/prod_07TermoProtector.jpeg",
     "presentaciones": [
       {
@@ -120,7 +115,6 @@
       "Anticaída",
       "Fortalece"
     ],
-    "imagen_miniatura": "img/miniaturas/TonicoCapilar.png",
     "imagen_detalle": "img/prod_09TonicoCapilar.jpeg",
     "presentaciones": [
       {
@@ -141,7 +135,6 @@
       "Sin sensación grasa",
       "Nutre"
     ],
-    "imagen_miniatura": "img/miniaturas/AceiteMultiProposito.png",
     "imagen_detalle": "img/prod_02Aceitemultiproposito.jpeg",
     "presentaciones": [
       {
@@ -162,7 +155,6 @@
       "Hidratación",
       "Color y brillo"
     ],
-    "imagen_miniatura": "img/miniaturas/MascarillaCapilarCandyPop.png",
     "imagen_detalle": "img/prod_28MascarillaCapilarCandyPop.jpeg",
     "presentaciones": [
       {
@@ -183,7 +175,6 @@
       "Reparación",
       "Manejabilidad"
     ],
-    "imagen_miniatura": "img/miniaturas/TratamientoCapilarIntesivo.png",
     "imagen_detalle": "img/prod_29TratamientoCapilarIntensivo.jpeg",
     "presentaciones": [
       {
@@ -208,7 +199,6 @@
       "Brillo",
       "Nutrición"
     ],
-    "imagen_miniatura": "img/miniaturas/ShampooUltraNutritivo.png",
     "imagen_detalle": "img/prod_31ShampooUltraNutritivo.jpeg",
     "presentaciones": [
       {
@@ -233,7 +223,6 @@
       "Fortalecimiento",
       "Natural"
     ],
-    "imagen_miniatura": "img/miniaturas/ShampooDeCebollaYRomero.png",
     "imagen_detalle": "img/prod_12ShampooCeboollaYRomero.jpeg",
     "presentaciones": [
       {
@@ -258,7 +247,6 @@
       "Frescura",
       "Purificante"
     ],
-    "imagen_miniatura": "img/miniaturas/ShampooDetox.png",
     "imagen_detalle": "img/prod_08ShampooDetox.jpeg",
     "presentaciones": [
       {
@@ -279,7 +267,6 @@
       "Desenredo fácil",
       "Protección"
     ],
-    "imagen_miniatura": "img/miniaturas/ShampooUltraNutritivo.png",
     "imagen_detalle": "img/prod_06AcondicionadorDeCeboolaYRomero.jpeg",
     "presentaciones": [
       {
@@ -289,52 +276,6 @@
       {
         "tamaño": "500 ml",
         "precio": 46000
-      }
-    ]
-  },
-  {
-    "disponible": true,
-    "id": "14",
-    "titulo": "Acondicionador Cebolla Morada y Romero",
-    "descripcion": "Complemento ideal para sellar la cutícula en tratamientos de crecimiento.",
-    "oferta": false,
-    "categoria": "acondicionador",
-    "beneficios": [
-      "Sella cutícula",
-      "Fuerza",
-      "Brillo"
-    ],
-    "imagen_miniatura": "img/miniaturas/AcondicionadorDeCebollaYRomero.png",
-    "imagen_detalle": "img/prod_06AcondicionadorDeCeboolaYRomero.jpeg",
-    "presentaciones": [
-      {
-        "tamaño": "250 ml",
-        "precio": 36000
-      },
-      {
-        "tamaño": "500 ml",
-        "precio": 46000
-      }
-    ]
-  },
-  {
-    "disponible": true,
-    "id": "15",
-    "titulo": "Acondicionador Leche de Coco y Almendras",
-    "descripcion": "Hidratación tropical para un cabello sedoso y profundamente nutrido.",
-    "oferta": false,
-    "categoria": "acondicionador",
-    "beneficios": [
-      "Hidratación",
-      "Olor tropical",
-      "Sedosidad"
-    ],
-    "imagen_miniatura": "img/miniaturas/AcondicionadorDeCebollaYRomero.png",
-    "imagen_detalle": "img/prod_06AcondicionadorDeCeboolaYRomero.jpeg",
-    "presentaciones": [
-      {
-        "tamaño": "250 ml",
-        "precio": 36000
       }
     ]
   },
@@ -350,7 +291,6 @@
       "Antioxidante",
       "Protector"
     ],
-    "imagen_miniatura": "img/miniaturas/LipstickUva.png",
     "imagen_detalle": "img/prod_11LipstickUva.jpeg",
     "presentaciones": [
       {
@@ -371,7 +311,6 @@
       "Nutrición",
       "Suavidad"
     ],
-    "imagen_miniatura": "img/miniaturas/LIPSTICKROSA.png",
     "imagen_detalle": "img/LIPSTICKROSA.png",
     "presentaciones": [
       {
@@ -392,7 +331,6 @@
       "Hectante",
       "Protector"
     ],
-    "imagen_miniatura": "img/miniaturas/LipstickFrutosRojos.png",
     "imagen_detalle": "img/prod_30LipstickFrutosRojos.jpeg",
     "presentaciones": [
       {
@@ -413,7 +351,6 @@
       "Aroma suave",
       "Multiuso"
     ],
-    "imagen_miniatura": "img/miniaturas/SplashCapilaryCorporal.png",
     "imagen_detalle": "img/prod_27SplashCapilaryCorporal.jpeg",
     "presentaciones": [
       {
@@ -434,33 +371,11 @@
       "Hidratación 24h",
       "Natural"
     ],
-    "imagen_miniatura": "img/miniaturas/MantequillaCorporal.png",
     "imagen_detalle": "img/prod_03Mantequillacorporal.jpeg",
     "presentaciones": [
       {
         "tamaño": "200 ml",
         "precio": 38000
-      }
-    ]
-  },
-  {
-    "disponible": true,
-    "id": "21",
-    "titulo": "Mantequilla Corporal Summer Clouds",
-    "descripcion": "Edición especial con fragancia fresca y textura ultra cremosa.",
-    "oferta": false,
-    "categoria": "corporal",
-    "beneficios": [
-      "Edición especial",
-      "Aroma verano",
-      "Suavidad"
-    ],
-    "imagen_miniatura": "img/miniaturas/MantequillaCorporalSummerClouds.png",
-    "imagen_detalle": "img/MantequillaCorporalSummerClouds.png",
-    "presentaciones": [
-      {
-        "tamaño": "1 unidad",
-        "precio": 40000
       }
     ]
   },
@@ -476,7 +391,6 @@
       "Protección",
       "Hidratación"
     ],
-    "imagen_miniatura": "img/miniaturas/BronceadorJamaicaBronce.png",
     "imagen_detalle": "img/prod_04AsoleadorBronceador.jpeg",
     "presentaciones": [
       {
@@ -501,7 +415,6 @@
       "Suavidad",
       "Cuidado íntimo"
     ],
-    "imagen_miniatura": "img/miniaturas/AceiteBifasicoFemenino.png",
     "imagen_detalle": "img/prod_05AceiteBifasicoFemenino.jpeg",
     "presentaciones": [
       {
@@ -522,7 +435,6 @@
       "Frescura",
       "Cuidado diario"
     ],
-    "imagen_miniatura": "img/miniaturas/AceiteBifasicoIntimoHombre.png",
     "imagen_detalle": "img/prod_15AceiteBifasicoHombre.jpeg",
     "presentaciones": [
       {
@@ -539,7 +451,6 @@
     "oferta": false,
     "categoria": "corporal",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/3bokiniBronceo.jpeg",
     "imagen_detalle": "img/prod_33bokiniBronceo.jpeg",
     "presentaciones": [
       {
@@ -556,8 +467,7 @@
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/GorroAluminio.jpeg",
-    "imagen_detalle": "img/prod_32GorrodeAluminio.jpeg",
+    "imagen_detalle": "img/gorrodealuminio.jpeg",
     "presentaciones": [
       {
         "tamaño": "1 unidad",
@@ -568,13 +478,12 @@
   {
     "disponible": true,
     "id": "27",
-    "titulo": "Gorro Ducha Tela / Salidas de baño",
+    "titulo": "Gorro de Tela para Ducha",
     "descripcion": "",
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/Salidasdebaño.png",
-    "imagen_detalle": "img/Salidasdebaño.png",
+    "imagen_detalle": "img/GorrodeTela.jpeg",
     "presentaciones": []
   },
   {
@@ -585,7 +494,6 @@
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/GorroSeda.png",
     "imagen_detalle": "img/prod_10GorroSeda.jpeg",
     "presentaciones": [
       {
@@ -602,7 +510,6 @@
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/Seditasparaeliminargrasadelrostro.png",
     "imagen_detalle": "img/prod_24Seditasparaeliminargrasadelrostro .jpeg",
     "presentaciones": [
       {
@@ -619,7 +526,6 @@
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/MasajeadorCapilarRedondo .png",
     "imagen_detalle": "img/prod_20MasajeadorCapilarRedondo.jpeg",
     "presentaciones": [
       {
@@ -636,7 +542,6 @@
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/MasajeadorCapilarPala.png",
     "imagen_detalle": "img/prod_19MasajeadorCapilarPala.jpeg",
     "presentaciones": [
       {
@@ -653,7 +558,6 @@
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/HumectantePárpado.png",
     "imagen_detalle": "img/prod_21HumectantePárpado.jpeg",
     "presentaciones": [
       {
@@ -670,7 +574,6 @@
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/humectantelabios.png",
     "imagen_detalle": "img/prod_22HumectanteLabios.jpeg",
     "presentaciones": [
       {
@@ -687,7 +590,6 @@
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/KitHidratacionFacial.png",
     "imagen_detalle": "img/prod_13KitHidratacionFacial.jpeg",
     "presentaciones": []
   },
@@ -699,7 +601,6 @@
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/AceitebifacicoHombreYMujer.png",
     "imagen_detalle": "img/prod_14KitAceitebifacicoHombreYMujer.jpeg",
     "presentaciones": []
   },
@@ -711,7 +612,6 @@
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/MoñaFlorDorada.png",
     "imagen_detalle": "img/prod_16FlorDorada.jpeg",
     "presentaciones": []
   },
@@ -723,7 +623,6 @@
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/KitLineadeTratamientoCapilar.png",
     "imagen_detalle": "img/prod_17KitLineadeTratamientoCapilar.jpeg",
     "presentaciones": []
   },
@@ -735,7 +634,6 @@
     "oferta": false,
     "categoria": "variedades",
     "beneficios": [],
-    "imagen_miniatura": "img/miniaturas/KitLineaDeShampooNatural.png",
     "imagen_detalle": "img/prod_18KitLineaDeShampooNatural.jpeg",
     "presentaciones": []
   }
