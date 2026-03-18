@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+    --primary: #d9777f;
+    /* Soft rose gold / dusty pink */
+    --primary-hover: #c4626a;
+    --secondary: #4a3b39;
+    /* Deep warm brown instead of slate */
+    --secondary-hover: #362927;
+    --bg-color: #fdfaf6;
+    /* Very light warm nude */
+    --surface: #ffffff;
+    --text-main: #5c4f4d;
+    /* Warm dark grey/brown */
+    --text-muted: #8c7e7c;
+    --border-color: #f0e6df;
+    /* Soft nude border */
+    --success: #82a896;
+    /* Muted sage green */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+    --radius-full: 9999px;
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.06);
+    --shadow-lg: 0 20px 40px -4px rgba(15, 23, 42, 0.12), 0 8px 16px -4px rgba(15, 23, 42, 0.08);
+
+    --font-sans: 'Outfit', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-color);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(217, 119, 127, 0.08) 0px, transparent 60%),
+        radial-gradient(at 100% 0%, rgba(245, 230, 216, 0.4) 0px, transparent 60%),
+        radial-gradient(at 100% 100%, rgba(212, 185, 172, 0.15) 0px, transparent 50%);
+    background-attachment: fixed;
+    font-size: 0.9375rem;
+    /* ~15px instead of 16px */
+    line-height: 1.5;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+    /* Space for float cart & iOS safe area */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif);
+    color: var(--secondary);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- SPLASH SCREEN (PANTALLA DE CARGA INICIAL) --- */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fdfaf6; /* Fondo blanco/crema limpio */
+    z-index: 99999; /* Por encima de TODO */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: slideUpFade 4s cubic-bezier(0.8, 0, 0.2, 1) forwards; /* Aumentado a 4 segundos */
+}
+
+/* Efecto de olas de luz rosada dinámicas en el fondo de carga */
+.splash-screen::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(217, 119, 127, 0.2) 0%, transparent 35%),
+                radial-gradient(circle at center, rgba(245, 230, 216, 0.4) 0%, transparent 45%);
+    background-position: 0 0, 100px 100px;
+    background-size: 50% 50%, 60% 60%;
+    animation: spinBg 12s linear infinite;
+    z-index: -1;
+}
+
+@keyframes spinBg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.splash-logo {
+    width: clamp(250px, 80vw, 520px); /* Aumentado 15% más para abarcar más espacio sin cortarse */
+    height: auto; /* Mantiene la proporción natural del logo alargado */
+    border-radius: 20px; /* Bordes suaves tipo tarjeta/app redondeada */
+    object-fit: contain; /* Asegura que NINGÚN texto se corte */
+    box-shadow: 0 15px 35px rgba(217, 119, 127, 0.3);
+    border: 5px solid #ffffff;
+    background-color: #ffffff;
+    animation: pulseSplashLogo 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes slideUpFade {
+    0% { transform: translateY(0); opacity: 1; visibility: visible; }
+    80% { transform: translateY(0); opacity: 1; visibility: visible; }
+    100% { transform: translateY(-100%); opacity: 0; visibility: hidden; }
+}
+
+@keyframes pulseSplashLogo {
+    from { transform: scale(0.95); opacity: 0.9; }
+    to { transform: scale(1.05); opacity: 1; }
+}
+
+/* --- EL LOGO GRANDE EN EL HEADER (DESPUÉS DE CARGAR) --- */
+.header {
+    background: rgba(253, 250, 246, 0.85);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    position: sticky;
+    top: 0;
+    padding: 1.2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(74, 59, 57, 0.05);
+    box-shadow: 0 4px 20px rgba(74, 59, 57, 0.03);
+    z-index: 100;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden; /* Cortar logo cuando la cabecera se encoja */
+}
+
+/* Cuando el usuario hace scroll hacia abajo */
+.header.scrolled {
+    padding: 0;
+    height: 0;
+    border-bottom-width: 0;
+    box-shadow: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* No bloquear clicks si está oculto */
+}
+
+.header-logo-large {
+    width: clamp(140px, 40vw, 250px); /* Rectángular y mucho más largo para no comerse las palabras */
+    height: auto;
+    border-radius: 12px; /* Más sutil */
+    object-fit: contain; /* Nunca comerá contenido */
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 2px var(--primary), var(--shadow-sm);
+    background-color: #ffffff;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: floatLogo 4s ease-in-out infinite; 
+    transform-origin: center top; 
+}
+
+/* Efecto en el logo mientras la cabecera se achica */
+.header.scrolled .header-logo-large {
+    transform: scale(0.3) translateY(-50px);
+    opacity: 0;
+}
+
+.header-logo-large:hover {
+    transform: scale(1.08); 
+}
+
+@keyframes floatLogo {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); box-shadow: 0 3px 0 2px var(--primary), var(--shadow-md); }
+    100% { transform: translateY(0px); }
+}
+
+.filtros-container {
+    padding: 1rem 0.5rem;
+    /* Less horizontal padding so categories fit */
+    background: rgba(255, 255, 255, 0.6);
+    /* More transparent to show nude background */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /* Removed position: sticky to prevent overlap */
+    position: relative;
+    border-bottom: 1px solid rgba(74, 59, 57, 0.05);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-top: 2rem;
+}

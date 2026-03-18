@@ -1,0 +1,640 @@
+[
+  {
+    "disponible": true,
+    "id": "01",
+    "titulo": "Tratamiento capilar intensivo",
+    "descripcion": "Nutrición profunda con más de 20 aceites naturales para reparar el cabello dañado.",
+    "oferta": false,
+    "categoria": "tratamientos",
+    "beneficios": [
+      "Fortalece e hidrata",
+      "Repara puntas",
+      "Sin siliconas"
+    ],
+    "imagen_detalle": "img/prod_01_tratamientocapilarintensivo.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "250 ml",
+        "precio": 35000
+      },
+      {
+        "tamaño": "500 ml",
+        "precio": 48000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "02",
+    "titulo": "Tratamiento de chocolate",
+    "descripcion": "Ritual de hidratación extrema con aroma a cacao para un brillo espejo.",
+    "oferta": false,
+    "categoria": "tratamientos",
+    "beneficios": [
+      "Brillo intenso",
+      "Suavidad",
+      "Aroma delicioso"
+    ],
+    "imagen_detalle": "img/prod_26TratamientoDeChocoterapia.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "500 ml",
+        "precio": 48000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "03",
+    "titulo": "Crema para peinar",
+    "descripcion": "Define y protege tu cabello dejando una textura ligera y sin frizz.",
+    "oferta": false,
+    "categoria": "tratamientos",
+    "beneficios": [
+      "Control frizz",
+      "Desenredo fácil",
+      "Protección"
+    ],
+    "imagen_detalle": "img/prod_23CremaParaPeinar.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "390 ml",
+        "precio": 40000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "04",
+    "titulo": "Serum Ácido Hialurónico",
+    "descripcion": "Hidratación molecular para restaurar la fibra capilar desde adentro.",
+    "oferta": false,
+    "categoria": "tratamientos",
+    "beneficios": [
+      "Retiene humedad",
+      "Antienvejecimiento capilar",
+      "Sedosidad"
+    ],
+    "imagen_detalle": "img/prod_02Aceitemultiproposito.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "120 ml",
+        "precio": 28000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "05",
+    "titulo": "Termoprotector",
+    "descripcion": "Escudo térmico para proteger el cabello del calor de planchas y secadores.",
+    "oferta": false,
+    "categoria": "tratamientos",
+    "beneficios": [
+      "Protección térmica",
+      "Brillo",
+      "Evita quiebre"
+    ],
+    "imagen_detalle": "img/prod_07TermoProtector.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "240 ml",
+        "precio": 35000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "06",
+    "titulo": "Tónico capilar cebolla morada y romero",
+    "descripcion": "Concentrado natural para estimular el crecimiento y fortalecer la raíz.",
+    "oferta": false,
+    "categoria": "tratamientos",
+    "beneficios": [
+      "Crecimiento rápido",
+      "Anticaída",
+      "Fortalece"
+    ],
+    "imagen_detalle": "img/prod_09TonicoCapilar.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "120 ml",
+        "precio": 30000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "07",
+    "titulo": "Óleo Multipropósito",
+    "descripcion": "Mezcla de aceites ligeros para sellar puntas y aportar nutrición extra.",
+    "oferta": false,
+    "categoria": "tratamientos",
+    "beneficios": [
+      "Sella puntas",
+      "Sin sensación grasa",
+      "Nutre"
+    ],
+    "imagen_detalle": "img/prod_02Aceitemultiproposito.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "30 ml",
+        "precio": 32000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "08",
+    "titulo": "Mascarilla Capilar Candy Pop",
+    "descripcion": "Divertida mascarilla con extractos frutales para una explosión de suavidad.",
+    "oferta": false,
+    "categoria": "tratamientos",
+    "beneficios": [
+      "Aroma frutal",
+      "Hidratación",
+      "Color y brillo"
+    ],
+    "imagen_detalle": "img/prod_28MascarillaCapilarCandyPop.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "1 unidad",
+        "precio": 15000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "09",
+    "titulo": "Terapia Capilar Alta Nutrición",
+    "descripcion": "Tratamiento profesional para cabellos extremadamente secos o procesados.",
+    "oferta": false,
+    "categoria": "tratamientos",
+    "beneficios": [
+      "Nutrición intensa",
+      "Reparación",
+      "Manejabilidad"
+    ],
+    "imagen_detalle": "img/prod_29TratamientoCapilarIntensivo.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "250 ml",
+        "precio": 36000
+      },
+      {
+        "tamaño": "500 ml",
+        "precio": 48000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "10",
+    "titulo": "Shampoo Ultranutritivo",
+    "descripcion": "Limpieza suave enriquecida con extractos naturales para dar vitalidad.",
+    "oferta": false,
+    "categoria": "shampoo",
+    "beneficios": [
+      "Limpia sin resecar",
+      "Brillo",
+      "Nutrición"
+    ],
+    "imagen_detalle": "img/prod_31ShampooUltraNutritivo.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "250 ml",
+        "precio": 35000
+      },
+      {
+        "tamaño": "500 ml",
+        "precio": 45000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "11",
+    "titulo": "Shampoo Cebolla Morada y Romero",
+    "descripcion": "Shampoo especializado en estimular el crecimiento y mejorar la circulación.",
+    "oferta": false,
+    "categoria": "shampoo",
+    "beneficios": [
+      "Crecimiento",
+      "Fortalecimiento",
+      "Natural"
+    ],
+    "imagen_detalle": "img/prod_12ShampooCeboollaYRomero.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "250 ml",
+        "precio": 35000
+      },
+      {
+        "tamaño": "500 ml",
+        "precio": 45000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "12",
+    "titulo": "Shampoo Detox",
+    "descripcion": "Elimina impurezas y residuos químicos para un cuero cabelludo sano.",
+    "oferta": false,
+    "categoria": "shampoo",
+    "beneficios": [
+      "Limpieza profunda",
+      "Frescura",
+      "Purificante"
+    ],
+    "imagen_detalle": "img/prod_08ShampooDetox.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "500 ml",
+        "precio": 48000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "13",
+    "titulo": "Acondicionador Ultranutritivo",
+    "descripcion": "Suaviza y desenreda aportando una capa protectora de nutrientes.",
+    "oferta": false,
+    "categoria": "acondicionador",
+    "beneficios": [
+      "Suavidad",
+      "Desenredo fácil",
+      "Protección"
+    ],
+    "imagen_detalle": "img/prod_06AcondicionadorDeCeboolaYRomero.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "250 ml",
+        "precio": 36000
+      },
+      {
+        "tamaño": "500 ml",
+        "precio": 46000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "16",
+    "titulo": "Lipstick Uva",
+    "descripcion": "Protector labial con extracto de uva para unos labios hidratados.",
+    "oferta": false,
+    "categoria": "brillos",
+    "beneficios": [
+      "Hidratante",
+      "Antioxidante",
+      "Protector"
+    ],
+    "imagen_detalle": "img/prod_11LipstickUva.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "5 g",
+        "precio": 12000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "17",
+    "titulo": "Lipstick rosa",
+    "descripcion": "Bálsamo labial con un toque de color rosa sutil y natural.",
+    "oferta": false,
+    "categoria": "brillos",
+    "beneficios": [
+      "Color sutil",
+      "Nutrición",
+      "Suavidad"
+    ],
+    "imagen_detalle": "img/LIPSTICKROSA.png",
+    "presentaciones": [
+      {
+        "tamaño": "10 g",
+        "precio": 12000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "18",
+    "titulo": "Lipstick Frutos Rojos",
+    "descripcion": "Hidratación intensa con el delicioso aroma de los frutos rojos.",
+    "oferta": false,
+    "categoria": "brillos",
+    "beneficios": [
+      "Delicioso aroma",
+      "Hectante",
+      "Protector"
+    ],
+    "imagen_detalle": "img/prod_30LipstickFrutosRojos.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "5 g",
+        "precio": 12000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "19",
+    "titulo": "Splash Capilar y Corporal",
+    "descripcion": "Fragancia refrescante para usar en todo el cuerpo y el cabello.",
+    "oferta": false,
+    "categoria": "corporal",
+    "beneficios": [
+      "Frescura",
+      "Aroma suave",
+      "Multiuso"
+    ],
+    "imagen_detalle": "img/prod_27SplashCapilaryCorporal.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "210 ml",
+        "precio": 40000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "20",
+    "titulo": "Mantequilla corporal",
+    "descripcion": "Nutrición profunda para la piel con mantecas naturales de alta calidad.",
+    "oferta": false,
+    "categoria": "corporal",
+    "beneficios": [
+      "Piel de seda",
+      "Hidratación 24h",
+      "Natural"
+    ],
+    "imagen_detalle": "img/prod_03Mantequillacorporal.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "200 ml",
+        "precio": 38000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "22",
+    "titulo": "Bronceador / Asoleador",
+    "descripcion": "Acelera el bronceado mientras cuida y humecta la piel bajo el sol.",
+    "oferta": false,
+    "categoria": "corporal",
+    "beneficios": [
+      "Tono dorado",
+      "Protección",
+      "Hidratación"
+    ],
+    "imagen_detalle": "img/prod_04AsoleadorBronceador.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "130 ml",
+        "precio": 70000
+      },
+      {
+        "tamaño": "Asoleador",
+        "precio": 40000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "23",
+    "titulo": "Aceite Bifásico Femenino",
+    "descripcion": "Cuidado íntimo y corporal con fórmula balanceada para ella.",
+    "oferta": false,
+    "categoria": "corporal",
+    "beneficios": [
+      "pH balanceado",
+      "Suavidad",
+      "Cuidado íntimo"
+    ],
+    "imagen_detalle": "img/prod_05AceiteBifasicoFemenino.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "60 ml",
+        "precio": 60000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "24",
+    "titulo": "Aceite Bifásico Masculino",
+    "descripcion": "Cuidado íntimo y corporal con fragancia y fórmula para él.",
+    "oferta": false,
+    "categoria": "corporal",
+    "beneficios": [
+      "Protección",
+      "Frescura",
+      "Cuidado diario"
+    ],
+    "imagen_detalle": "img/prod_15AceiteBifasicoHombre.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "60 ml",
+        "precio": 60000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "25",
+    "titulo": "Bikini Bronceo",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "corporal",
+    "beneficios": [],
+    "imagen_detalle": "img/prod_33bokiniBronceo.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "1 unidad",
+        "precio": 40000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "26",
+    "titulo": "Gorro de Aluminio",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/gorrodealuminio.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "1 unidad",
+        "precio": 6000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "27",
+    "titulo": "Gorro de Tela para Ducha",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/GorrodeTela.jpeg",
+    "presentaciones": []
+  },
+  {
+    "disponible": true,
+    "id": "28",
+    "titulo": "Gorro Seda",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/prod_10GorroSeda.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "1 unidad",
+        "precio": 18000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "29",
+    "titulo": "Láminas de Arroz Piel Grasa",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/prod_24Seditasparaeliminargrasadelrostro .jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "1 unidad",
+        "precio": 8000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "30",
+    "titulo": "Masajeador Capilar Redondo",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/prod_20MasajeadorCapilarRedondo.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "1 unidad",
+        "precio": 18000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "31",
+    "titulo": "Masajeador Capilar Pala",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/prod_19MasajeadorCapilarPala.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "1 unidad",
+        "precio": 18000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "32",
+    "titulo": "Humectante Párpados",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/prod_21HumectantePárpado.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "1 unidad",
+        "precio": 5000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "33",
+    "titulo": "Humectante Labios",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/prod_22HumectanteLabios.jpeg",
+    "presentaciones": [
+      {
+        "tamaño": "1 unidad",
+        "precio": 7000
+      }
+    ]
+  },
+  {
+    "disponible": true,
+    "id": "34",
+    "titulo": "Kit Hidratacion Facial",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/prod_13KitHidratacionFacial.jpeg",
+    "presentaciones": []
+  },
+  {
+    "disponible": true,
+    "id": "35",
+    "titulo": "Kit Aceite Bifasico",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/prod_14KitAceitebifacicoHombreYMujer.jpeg",
+    "presentaciones": []
+  },
+  {
+    "disponible": true,
+    "id": "36",
+    "titulo": "Flor Dorada",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/prod_16FlorDorada.jpeg",
+    "presentaciones": []
+  },
+  {
+    "disponible": true,
+    "id": "37",
+    "titulo": "Kit Linea de Tratamiento Capilar",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/prod_17KitLineadeTratamientoCapilar.jpeg",
+    "presentaciones": []
+  },
+  {
+    "disponible": true,
+    "id": "38",
+    "titulo": "Kit Linea de Shampoo Natural",
+    "descripcion": "",
+    "oferta": false,
+    "categoria": "variedades",
+    "beneficios": [],
+    "imagen_detalle": "img/prod_18KitLineaDeShampooNatural.jpeg",
+    "presentaciones": []
+  }
+]
