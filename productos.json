@@ -291,30 +291,10 @@
       "Antioxidante",
       "Protector"
     ],
-    "imagen_detalle": "img/prod_11LipstickUva.jpeg",
+    "imagen_detalle": "img/LipstickUva.jpeg",
     "presentaciones": [
       {
         "tamaño": "5 g",
-        "precio": 12000
-      }
-    ]
-  },
-  {
-    "disponible": true,
-    "id": "17",
-    "titulo": "Lipstick rosa",
-    "descripcion": "Bálsamo labial con un toque de color rosa sutil y natural.",
-    "oferta": false,
-    "categoria": "brillos",
-    "beneficios": [
-      "Color sutil",
-      "Nutrición",
-      "Suavidad"
-    ],
-    "imagen_detalle": "img/LIPSTICKROSA.png",
-    "presentaciones": [
-      {
-        "tamaño": "10 g",
         "precio": 12000
       }
     ]
@@ -331,7 +311,7 @@
       "Hectante",
       "Protector"
     ],
-    "imagen_detalle": "img/prod_30LipstickFrutosRojos.jpeg",
+    "imagen_detalle": "img/Lipstickfrutosrojos.jpeg",
     "presentaciones": [
       {
         "tamaño": "5 g",
